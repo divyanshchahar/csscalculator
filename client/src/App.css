@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --h1: 10vw;
+
+  --p1: calc(0.2 * var(--h1));
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.top-nav-bar {
   display: flex;
-  flex-direction: column;
+  padding: var(--p1);
+  justify-content: space-between;
+}
+
+.branding {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: "Teko", sans-serif;
+  font-size: var(--h1);
 }
 
-.App-link {
-  color: #61dafb;
+.brand-image {
+  height: var(--h1);
+  padding-right: var(--p1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.icon {
+  height: var(--h1);
+}
+
+/* 
+##################
+# TOUCH DISPLAYS #
+################## 
+*/
+
+@media screen and (min-width: 429px) {
+  :root {
+    --h1: 5vw;
+
+    --p1: calc(0.2 * var(--h1));
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* 
+#####################
+# COMPUTER DISPLAYS #
+##################### */
+
+@media screen and (min-width: 1025px) {
+  :root {
+    --h1: 2.5vw;
+
+    --p1: calc(0.2 * var(--h1));
   }
 }

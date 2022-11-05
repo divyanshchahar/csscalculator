@@ -3,7 +3,7 @@ import ExportCssButton from "../components/ExportCssButton";
 
 function TopNavBar() {
   return (
-    <div classNAme="top-nav-bar">
+    <div className="top-nav-bar">
       <BrandingContainer />
       <ExportCssButton />
     </div>
