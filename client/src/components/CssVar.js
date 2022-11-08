@@ -1,5 +1,4 @@
 import uuid from "react-uuid";
-import DetermineClass from "../utils/DetermineClass";
 
 function CssVar(args) {
   if (args.param.search(/calc\((.*)\)/)) {
