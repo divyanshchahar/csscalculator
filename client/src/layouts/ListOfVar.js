@@ -5,13 +5,15 @@ import { useState } from "react";
 import CssVar from "../components/CssVar";
 
 function ListOfVar() {
-  const [items, setitems] = useState();
+  const [items, setitems] = useState(["a", "b", "c"]);
   return (
     <>
       {items ? (
-        items.map((item) => {
-          return <CssVar param={item} />;
-        })
+        <div>
+          {items.map((item) => {
+            return <CssVar param={item} />;
+          })}
+        </div>
       ) : (
         <div>no variables added</div>
       )}

@@ -1,5 +1,7 @@
+import uuid from "react-uuid";
+
 function CssVar(args) {
-  return <div>{args.param}</div>;
+  return <div key={uuid()}>{args.param}</div>;
 }
 
 export default CssVar;
