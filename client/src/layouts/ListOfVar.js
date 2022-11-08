@@ -5,11 +5,11 @@ import { useState } from "react";
 import CssVar from "../components/CssVar";
 
 function ListOfVar() {
-  const [items, setitems] = useState(["a", "b", "c"]);
+  const [items, setitems] = useState(["50px", "calc(var(--h1) * 0.8)"]);
   return (
     <>
       {items ? (
-        <div>
+        <div className="list-of-vars">
           {items.map((item) => {
             return <CssVar param={item} />;
           })}
