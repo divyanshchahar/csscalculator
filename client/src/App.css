@@ -14,6 +14,9 @@
   --p3: calc(0.25 * var(--fs3));
 
   --b4: calc(0.25 * var(--fs3));
+
+  --m1_5: 5vh;
+  --m2_5: 5vw;
 }
 
 .branding {
@@ -52,6 +55,11 @@
   border-left: var(--b4) solid green;
 }
 
+.list-of-vars {
+  padding: var(--m1_5) 0 var(--m2_5) var(--m1_5);
+  width: fit-content;
+}
+
 /* 
 ##################
 # TOUCH DISPLAYS #
@@ -63,6 +71,15 @@
     --h1: 5vw;
 
     --p2: calc(0.2 * var(--h1));
+
+    --fs3: 1rem;
+    --m3: calc(0.25 * var(--fs3));
+    --p3: calc(0.25 * var(--fs3));
+
+    --b4: calc(0.25 * var(--fs3));
+
+    --m1_5: 5vh;
+    --m2_5: 5vw;
   }
 }
 
@@ -76,5 +93,14 @@
     --h1: 2.5vw;
 
     --p2: calc(0.2 * var(--h1));
+
+    --fs3: 1rem;
+    --m3: calc(0.25 * var(--fs3));
+    --p3: calc(0.25 * var(--fs3));
+
+    --b4: calc(0.25 * var(--fs3));
+
+    --m1_5: 5vh;
+    --m2_5: 5vw;
   }
 }
