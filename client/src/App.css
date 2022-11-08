@@ -9,10 +9,11 @@
 
   --p2: calc(0.2 * var(--h1));
 
-  --m3: calc(0.1 * var(--h1));
-  --p3: calc(0.25 * var(--h1));
+  --fs3: 1rem;
+  --m3: calc(0.25 * var(--fs3));
+  --p3: calc(0.25 * var(--fs3));
 
-  --b4: calc(0.1 * var(--h1));
+  --b4: calc(0.25 * var(--fs3));
 }
 
 .branding {
@@ -38,6 +39,7 @@
 }
 
 .css-var {
+  font-size: var(--fs3);
   margin: var(--m3);
   padding-left: var(--p3);
 }
@@ -49,6 +51,7 @@
 .absolute {
   border-left: var(--b4) solid green;
 }
+
 /* 
 ##################
 # TOUCH DISPLAYS #
