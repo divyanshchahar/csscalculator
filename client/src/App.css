@@ -7,13 +7,12 @@
 :root {
   --h1: 10vw;
 
-  --p1: calc(0.2 * var(--h1));
-}
+  --p2: calc(0.2 * var(--h1));
 
-.top-nav-bar {
-  display: flex;
-  padding: var(--p1);
-  justify-content: space-between;
+  --m3: calc(0.1 * var(--h1));
+  --p3: calc(0.25 * var(--h1));
+
+  --b4: calc(0.1 * var(--h1));
 }
 
 .branding {
@@ -25,13 +24,31 @@
 
 .brand-image {
   height: var(--h1);
-  padding-right: var(--p1);
+  padding-right: var(--p2);
 }
 
 .icon {
   height: var(--h1);
 }
 
+.top-nav-bar {
+  display: flex;
+  padding: var(--p2);
+  justify-content: space-between;
+}
+
+.css-var {
+  margin: var(--m3);
+  padding-left: var(--p3);
+}
+
+.calculated {
+  border-left: var(--b4) solid grey;
+}
+
+.absolute {
+  border-left: var(--b4) solid green;
+}
 /* 
 ##################
 # TOUCH DISPLAYS #
@@ -42,7 +59,7 @@
   :root {
     --h1: 5vw;
 
-    --p1: calc(0.2 * var(--h1));
+    --p2: calc(0.2 * var(--h1));
   }
 }
 
@@ -55,6 +72,6 @@
   :root {
     --h1: 2.5vw;
 
-    --p1: calc(0.2 * var(--h1));
+    --p2: calc(0.2 * var(--h1));
   }
 }
