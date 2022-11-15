@@ -1,9 +1,11 @@
 import CheckLocalStorage from "./CheckLocalStorage";
 import InitializeLocalStorage from "./InitializeLocalStorage";
+import CheckVarInLocal from "./CheckVarInLocal";
+import UpdateLocalStorage from "./UpdateLocalStorage";
 
 function AddVarToLocal(arg) {
   if (CheckLocalStorage()) {
-    // code yet to follow
+    UpdateLocalStorage(arg);
   } else {
     InitializeLocalStorage(arg);
   }
