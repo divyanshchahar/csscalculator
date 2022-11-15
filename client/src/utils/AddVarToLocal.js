@@ -5,8 +5,7 @@ function AddVarToLocal(arg) {
   if (CheckLocalStorage()) {
     // code yet to follow
   } else {
-    console.log("error in code");
-    InitializeLocalStorage(arg.param);
+    InitializeLocalStorage(arg);
   }
 }
 
