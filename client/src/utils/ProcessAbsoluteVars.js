@@ -3,7 +3,6 @@ function ProcessAbsoluteVars(arg) {
 
   temp = temp.trim();
   const varValue = temp.replace(";", "");
-  console.log(varValue);
 
   return [varName, varValue];
 }
