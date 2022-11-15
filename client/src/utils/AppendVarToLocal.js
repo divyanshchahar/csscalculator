@@ -1,4 +1,4 @@
-function WriteVarToLocal(arg) {
+function AppendVarToLocal(arg) {
   const [varName, varValue] = arg;
   const obj = JSON.parse(window.localStorage.getItem("CSS_CACLCULATOR"));
 
@@ -7,4 +7,4 @@ function WriteVarToLocal(arg) {
   window.localStorage.setItem("CSS_CACLCULATOR", JSON.stringify(temp));
 }
 
-export default WriteVarToLocal;
+export default AppendVarToLocal;
