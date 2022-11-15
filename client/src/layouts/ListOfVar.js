@@ -5,7 +5,7 @@ import { useState } from "react";
 import CssVar from "../components/CssVar";
 
 function ListOfVar() {
-  const [items, setitems] = useState(["50px", "calc(var(--h1) * 0.8)"]);
+  const [items, setitems] = useState(["--h1: 10vw;", "calc(var(--h1) * 0.8)"]);
   return (
     <>
       {items ? (
