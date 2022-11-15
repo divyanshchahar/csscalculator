@@ -7,7 +7,6 @@ function CheckVarInLocal(arg) {
   } else {
     return false;
   }
-  //   console.log(obj.hasOwnProperty(varName));
 }
 
 export default CheckVarInLocal;
