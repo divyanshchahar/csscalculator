@@ -3,10 +3,11 @@ import uuid from "react-uuid";
 import RenderAbsoluteVars from "./RenderAbsoluteVars";
 
 function CssVar(args) {
-  if (args.param.search(/calc\((.*)\)/)) {
-    return <RenderAbsoluteVars param={args.param} />;
-  } else {
+  const pattern = /calc\((.*)\)/g;
+  if (pattern.test(args.param)) {
     return <div className="css-var calculated">{args.param}</div>;
+  } else {
+    return <RenderAbsoluteVars param={args.param} />;
   }
 }
 
