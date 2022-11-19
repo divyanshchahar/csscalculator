@@ -1,7 +1,7 @@
 /**
- *
+ * generates a string from the combination of variable name and variable unit
  * @param {array} arg - array of calaulated value and unit of the refrenced value
- * @returns {string} - a string formed by combining calculated value and unit of refrence value
+ * @returns {string} a string formed by combining calculated value and unit of refrence value
  */
 function GenerateValueString(arg) {
   const [calculatedValue, varUnit] = arg;
