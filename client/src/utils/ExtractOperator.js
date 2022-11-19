@@ -5,7 +5,7 @@ function ExtractOperator(arg) {
   let temp = arg.replace(varPattern, "");
   const [operator] = temp.match(operatorPattern);
 
-  console.log(operator);
+  return operator;
 }
 
 export default ExtractOperator;
