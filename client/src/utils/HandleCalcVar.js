@@ -7,6 +7,11 @@ import PerformCalculation from "./PerformCalculation";
 import GenerateValueString from "./GenerateValueString";
 import AddVarToLocal from "./AddVarToLocal";
 
+/**
+ * function to handle the calculated variable string
+ * @param {string} arg - string of the form _--varname: calc(__calculation__);_
+ */
+
 function HandleCalcVar(arg) {
   const [varName, calcString] = SplitCalcVarString(arg);
   const varValue = ResolveVarRefrence(calcString);
