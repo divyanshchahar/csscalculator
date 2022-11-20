@@ -1,6 +1,12 @@
 import ProcessAbsoluteVars from "../utils/ProcessAbsoluteVars";
 import AddVarToLocal from "../utils/AddVarToLocal";
 
+/**
+ * componenet to render absolute variable
+ * @param {string} arg - string of absolute variable
+ * @returns
+ */
+
 function RenderAbsoluteVars(arg) {
   const [varName, varValue] = ProcessAbsoluteVars(arg.param);
 
