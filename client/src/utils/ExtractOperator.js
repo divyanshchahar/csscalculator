@@ -1,5 +1,5 @@
 /**
- *
+ * extracts operator
  * @param {string} arg - calculation string of for _calc(__calculation__)_
  * @returns
  */
