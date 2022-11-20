@@ -4,6 +4,11 @@ import { useState } from "react";
 // IMPORTING CUSTOM FUNCTIONALITY
 import CssVar from "../components/CssVar";
 
+/**
+ * layout to render list of varaibles
+ * @returns {HTML components}
+ */
+
 function ListOfVar() {
   const [items, setitems] = useState([
     "--h1: 10vw;",
