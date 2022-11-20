@@ -1,5 +1,10 @@
 import fileIcon from "../assets/file_save_icon.svg";
 
+/**
+ * componenet to render export button
+ * @returns {HTML Componenet}
+ */
+
 function ExportCssButton() {
   return (
     <div className="image-button">
