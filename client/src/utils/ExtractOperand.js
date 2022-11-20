@@ -1,5 +1,5 @@
 /**
- *
+ * generate an array of operands in the order they ocuur
  * @param {array} arg arrray resolved value of refrence variable and calculation string containing _calc(__calculation__)_
  * @returns {array} array containing operands in the order they occur in calculation string
  */
