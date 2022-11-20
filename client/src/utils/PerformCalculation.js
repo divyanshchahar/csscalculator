@@ -1,5 +1,5 @@
 /**
- *
+ * perform binary operation
  * @param {array} args - array containing an array of operands and operator
  * @returns {number} result of calculation
  */
