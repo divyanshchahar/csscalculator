@@ -1,5 +1,11 @@
 import HandleCalcVar from "../utils/HandleCalcVar";
 
+/**
+ * componenet to render calculated varaible
+ * @param {string} arg - calculation variable string
+ * @returns {HTML componenets}
+ */
+
 function RenderCalcVars(arg) {
   const calcString = arg.param;
 
