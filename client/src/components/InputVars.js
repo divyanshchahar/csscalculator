@@ -1,3 +1,5 @@
+import CreateListItem from "../utils/CreateListItem";
+
 import { useState } from "react";
 
 /**
@@ -5,7 +7,8 @@ import { useState } from "react";
  * @returns {HTML} input of type text
  */
 
-function InputVars() {
+function InputVars(args) {
+  const [stateVar, stateFunc] = args.param;
   const [inputString, setInputString] = useState();
 
   return (
@@ -13,6 +16,10 @@ function InputVars() {
       type="text"
       value={inputString}
       onChange={(e) => setInputString(e.target.value)}
+      onKeyDown={(e) => {
+        CreateListItem(e, stateVar, stateFunc);
+        if (e.key === "Enter") setInputString("");
+      }}
     />
   );
 }
