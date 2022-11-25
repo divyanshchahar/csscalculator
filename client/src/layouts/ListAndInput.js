@@ -3,19 +3,20 @@ import { useState } from "react";
 
 // IMPORTING CUSTOM FUNCTIONALITY
 import CssVar from "../components/CssVar";
+import InputVars from "../components/InputVars";
 
 /**
  * layout to render list of varaibles
  * @returns {HTML components}
  */
 
-function ListOfVar() {
-  const [items, setitems] = useState([
+function ListAndInput() {
+  const [items, setItems] = useState([
     "--h1: 10vw;",
     "--h2: calc(var(--h1) * 0.8);",
   ]);
   return (
-    <>
+    <div className="list-and-input">
       {items ? (
         <div className="list-of-vars">
           {items.map((item) => {
@@ -25,8 +26,9 @@ function ListOfVar() {
       ) : (
         <div>no variables added</div>
       )}
-    </>
+      <InputVars param={[items, setItems]} />
+    </div>
   );
 }
 
-export default ListOfVar;
+export default ListAndInput;
