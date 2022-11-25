@@ -16,7 +16,7 @@ function ListAndInput() {
     "--h2: calc(var(--h1) * 0.8);",
   ]);
   return (
-    <>
+    <div className="list-and-input">
       {items ? (
         <div className="list-of-vars">
           {items.map((item) => {
@@ -27,7 +27,7 @@ function ListAndInput() {
         <div>no variables added</div>
       )}
       <InputVars />
-    </>
+    </div>
   );
 }
 

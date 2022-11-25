@@ -55,7 +55,7 @@
   border-left: var(--b4) solid green;
 }
 
-.items-list {
+.list-and-input {
   padding: var(--m1_5) 0 var(--m2_5) var(--m1_5);
   width: fit-content;
 }
