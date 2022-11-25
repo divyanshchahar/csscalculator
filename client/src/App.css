@@ -55,10 +55,15 @@
   border-left: var(--b4) solid green;
 }
 
-.list-of-vars {
+.items-list {
   padding: var(--m1_5) 0 var(--m2_5) var(--m1_5);
   width: fit-content;
 }
+
+/* .list-of-vars {
+  padding: var(--m1_5) 0 var(--m2_5) var(--m1_5);
+  width: fit-content;
+} */
 
 /* 
 ##################
