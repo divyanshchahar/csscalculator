@@ -1,15 +1,14 @@
-import TopNavBar from "./layouts/TopNavBar";
-import ListOfVar from "./layouts/ListOfVar";
 import ItemList from "./layouts/ItemList";
+import TopNavBar from "./layouts/TopNavBar";
+import ListAndInput from "./layouts/ListAndInput";
 
 import "./App.css";
 
 function App() {
   return (
     <>
-      <ItemList />
-      {/* <TopNavBar />
-      <ListOfVar /> */}
+      <TopNavBar />
+      <ListAndInput />
     </>
   );
 }
