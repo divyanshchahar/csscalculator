@@ -10,7 +10,7 @@ import CssVar from "../components/CssVar";
  */
 
 function ListOfVar() {
-  const [items, setitems] = useState([
+  const [items, setItems] = useState([
     "--h1: 10vw;",
     "--h2: calc(var(--h1) * 0.8);",
   ]);
