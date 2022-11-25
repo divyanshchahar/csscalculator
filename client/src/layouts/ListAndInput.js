@@ -26,7 +26,7 @@ function ListAndInput() {
       ) : (
         <div>no variables added</div>
       )}
-      <InputVars />
+      <InputVars param={[items, setItems]} />
     </div>
   );
 }
