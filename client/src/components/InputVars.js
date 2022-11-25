@@ -6,13 +6,13 @@ import { useState } from "react";
  */
 
 function InputVars() {
-  const [inputString, setinputString] = useState();
+  const [inputString, setInputString] = useState();
 
   return (
     <input
       type="text"
       value={inputString}
-      onChange={(e) => setinputString(e.value.inputString)}
+      onChange={(e) => setInputString(e.target.value)}
     />
   );
 }
