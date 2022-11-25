@@ -3,6 +3,7 @@ import { useState } from "react";
 
 // IMPORTING CUSTOM FUNCTIONALITY
 import CssVar from "../components/CssVar";
+import InputVars from "../components/InputVars";
 
 /**
  * layout to render list of varaibles
@@ -25,6 +26,7 @@ function ListAndInput() {
       ) : (
         <div>no variables added</div>
       )}
+      <InputVars />
     </>
   );
 }
