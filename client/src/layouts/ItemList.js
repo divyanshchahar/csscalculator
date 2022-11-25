@@ -1,4 +1,4 @@
-import ListOfVar from "./ListOfVar";
+import ListAndInput from "./ListAndInput";
 import InputVars from "../components/InputVars";
 import TopNavBar from "./TopNavBar";
 
@@ -11,7 +11,7 @@ function ItemList() {
   return (
     <div className="items-list">
       <TopNavBar />
-      <ListOfVar />
+      <ListAndInput />
       <InputVars />
     </div>
   );

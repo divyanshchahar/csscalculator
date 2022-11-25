@@ -9,7 +9,7 @@ import CssVar from "../components/CssVar";
  * @returns {HTML components}
  */
 
-function ListOfVar() {
+function ListAndInput() {
   const [items, setItems] = useState([
     "--h1: 10vw;",
     "--h2: calc(var(--h1) * 0.8);",
@@ -29,4 +29,4 @@ function ListOfVar() {
   );
 }
 
-export default ListOfVar;
+export default ListAndInput;
