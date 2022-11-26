@@ -3,15 +3,16 @@ import InitializeLocalStorage from "./InitializeLocalStorage";
 import UpdateLocalStorage from "./UpdateLocalStorage";
 
 /**
- * function to add variable to local storage
- * @param {string} arg - string containing variable name and variable value
+ *
+ * @param {string} varName - name of the variable
+ * @param {*} varValue - value of the variable eg _10vh_ , _5px_
  */
 
-function AddVarToLocal(arg) {
+function AddVarToLocal(varName, varValue) {
   if (CheckLocalStorage()) {
-    UpdateLocalStorage(arg);
+    UpdateLocalStorage(varName, varValue);
   } else {
-    InitializeLocalStorage(arg);
+    InitializeLocalStorage(varName, varValue);
   }
 }
 
