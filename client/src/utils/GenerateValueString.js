@@ -1,10 +1,11 @@
 /**
- * generates a string from the combination of variable name and variable unit
- * @param {array} arg - array of calaulated value and unit of the refrenced value
+ * Generates a value string by combining variable unit and calculated quantity
+ * @param {string} calculatedValue - calculated value of the variable
+ * @param {string} varUnit - unit of calculation
  * @returns {string} a string formed by combining calculated value and unit of refrence value
  */
-function GenerateValueString(arg) {
-  const [calculatedValue, varUnit] = arg;
+function GenerateValueString(calculatedValue, varUnit) {
+  // const [calculatedValue, varUnit] = arg;
 
   return `${calculatedValue}${varUnit}`;
 }
