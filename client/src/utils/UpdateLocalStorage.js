@@ -4,14 +4,15 @@ import UpdateVarInLocal from "./UpdateVarInLocal";
 
 /**
  * function to update variable in local storage
- * @param {string} arg variable name
+ * @param {string} varName - variable name
+ * @param {string} varValue - value of variable eg _10vh_, _5px_
  */
 
-function UpdateLocalStorage(arg) {
-  if (CheckVarInLocal(arg)) {
-    UpdateVarInLocal(arg);
+function UpdateLocalStorage(varName, varValue) {
+  if (CheckVarInLocal(varName)) {
+    UpdateVarInLocal(varName, varValue);
   } else {
-    AppendVarToLocal(arg);
+    AppendVarToLocal(varName, varValue);
   }
 }
 
