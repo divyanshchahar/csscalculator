@@ -3,9 +3,9 @@ import InitializeLocalStorage from "./InitializeLocalStorage";
 import UpdateLocalStorage from "./UpdateLocalStorage";
 
 /**
- *
+ * Function handle insertion and updation of variables in local storage
  * @param {string} varName - name of the variable
- * @param {*} varValue - value of the variable eg _10vh_ , _5px_
+ * @param {string} varValue - value of the variable eg _10vh_ , _5px_
  */
 
 function AddVarToLocal(varName, varValue) {
