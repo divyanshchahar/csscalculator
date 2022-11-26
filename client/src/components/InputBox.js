@@ -7,7 +7,7 @@ import { useState } from "react";
  * @returns {HTML} input of type text
  */
 
-function InputVars(args) {
+function InputBox(args) {
   const [stateVar, stateFunc] = args.param;
   const [inputString, setInputString] = useState();
 
@@ -24,4 +24,4 @@ function InputVars(args) {
   );
 }
 
-export default InputVars;
+export default InputBox;
