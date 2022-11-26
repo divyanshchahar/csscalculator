@@ -1,5 +1,5 @@
 /**
- * return true if local storage is present else returns false
+ * return `true` if local storage is present else returns `false`
  * @returns {boolean}
  */
 

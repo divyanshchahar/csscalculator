@@ -3,7 +3,7 @@ import { useState } from "react";
 
 // IMPORTING CUSTOM FUNCTIONALITY
 import CssVar from "../components/CssVar";
-import InputVars from "../components/InputVars";
+import InputBox from "../components/InputBox";
 
 /**
  * layout to render list of varaibles
@@ -26,7 +26,7 @@ function ListAndInput() {
       ) : (
         <div>no variables added</div>
       )}
-      <InputVars param={[items, setItems]} />
+      <InputBox param={[items, setItems]} />
     </div>
   );
 }

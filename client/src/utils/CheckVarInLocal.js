@@ -1,11 +1,10 @@
 /**
  * checks the presence of variable in lolcal storage, return tue if the variable is present otherwise returns false
- * @param {array} arg - variable name and variable value
+ * @param {string} varName - variable name
  * @returns {boolean}
  */
 
-function CheckVarInLocal(arg) {
-  const [varName, varValue] = arg;
+function CheckVarInLocal(varName) {
   const obj = JSON.parse(window.localStorage.getItem("CSS_CACLCULATOR"));
 
   if (obj.hasOwnProperty(varName)) {

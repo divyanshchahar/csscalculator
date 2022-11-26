@@ -1,12 +1,11 @@
 /**
- * generate an array of operands in the order they ocuur
- * @param {array} arg arrray resolved value of refrence variable and calculation string containing _calc(__calculation__)_
+ * Generate an array of operands in the order they ocuur
+ * @param {string} operand1 - resolved value of refrence variable
+ * @param {string} calcString - calculation string containing _calc(__calculation__)_
  * @returns {array} array containing operands in the order they occur in calculation string
  */
 
-function ExtractOperand(arg) {
-  const [operand1, calcString] = arg;
-
+function ExtractOperand(operand1, calcString) {
   const decimalString = /\./g;
   const intAfterOperand = /[\*\+\-\/]\s\d+/g;
   const intBeforeOperand = /\d+\s[\*\+\-\/]/g;
@@ -16,25 +15,25 @@ function ExtractOperand(arg) {
   const decimalOperand = /\d+\.\d+/g;
 
   if (decimalString.test(calcString)) {
-    if (decimalBeforeOperand.test(arg)) {
+    if (decimalBeforeOperand.test(calcString)) {
       let [temp] = calcString.match(decimalBeforeOperand);
       [temp] = temp.match(decimalOperand);
       return [operand1, temp.trim()];
     }
 
-    if (decimalAfterOperand.test(arg)) {
+    if (decimalAfterOperand.test(calcString)) {
       let [temp] = calcString.match(decimalAfterOperand);
       [temp] = temp.match(decimalOperand);
       return [operand1, temp.trim()];
     }
   } else {
-    if (intAfterOperand.test(arg)) {
+    if (intAfterOperand.test(calcString)) {
       let [temp] = calcString.match(intAfterOperand);
       [temp] = temp.match(wholeOperand);
       return [operand1, temp.trim()];
     }
 
-    if (intBeforeOperand.test(arg)) {
+    if (intBeforeOperand.test(calcString)) {
       let [temp] = calcString.match(intBeforeOperand);
       [temp] = temp.match(wholeOperand);
       return [operand1, temp.trim()];

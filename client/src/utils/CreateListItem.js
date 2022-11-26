@@ -6,7 +6,6 @@
  */
 function CreateListItem(e, stateVar, stateFunc) {
   if (e.key === "Enter") {
-    console.log(typeof stateFunc);
     stateFunc([...stateVar, e.target.value]);
   }
 }
