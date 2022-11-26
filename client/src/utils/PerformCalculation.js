@@ -1,11 +1,11 @@
 /**
- * perform binary operation
- * @param {array} args - array containing an array of operands and operator
- * @returns {number} result of calculation
+ *
+ * @param {array} operands - array consisting of operands 1 and 2 as two seperate __string__
+ * @param {string} operator - array consisting of operand as a __string__
+ * @returns {number} - result of calculation
  */
 
-function PerformCalculation(args) {
-  const [operands, operator] = args;
+function PerformCalculation(operands, operator) {
   const [operand1, operand2] = operands;
 
   switch (operator) {
