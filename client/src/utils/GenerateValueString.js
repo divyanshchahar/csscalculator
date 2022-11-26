@@ -5,8 +5,6 @@
  * @returns {string} a string formed by combining calculated value and unit of refrence value
  */
 function GenerateValueString(calculatedValue, varUnit) {
-  // const [calculatedValue, varUnit] = arg;
-
   return `${calculatedValue}${varUnit}`;
 }
 
