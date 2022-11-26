@@ -6,8 +6,6 @@
  */
 
 function ExtractOperand(operand1, calcString) {
-  // const [operand1, calcString] = arg;
-
   const decimalString = /\./g;
   const intAfterOperand = /[\*\+\-\/]\s\d+/g;
   const intBeforeOperand = /\d+\s[\*\+\-\/]/g;
@@ -17,25 +15,25 @@ function ExtractOperand(operand1, calcString) {
   const decimalOperand = /\d+\.\d+/g;
 
   if (decimalString.test(calcString)) {
-    if (decimalBeforeOperand.test(arg)) {
+    if (decimalBeforeOperand.test(calcString)) {
       let [temp] = calcString.match(decimalBeforeOperand);
       [temp] = temp.match(decimalOperand);
       return [operand1, temp.trim()];
     }
 
-    if (decimalAfterOperand.test(arg)) {
+    if (decimalAfterOperand.test(calcString)) {
       let [temp] = calcString.match(decimalAfterOperand);
       [temp] = temp.match(decimalOperand);
       return [operand1, temp.trim()];
     }
   } else {
-    if (intAfterOperand.test(arg)) {
+    if (intAfterOperand.test(calcString)) {
       let [temp] = calcString.match(intAfterOperand);
       [temp] = temp.match(wholeOperand);
       return [operand1, temp.trim()];
     }
 
-    if (intBeforeOperand.test(arg)) {
+    if (intBeforeOperand.test(calcString)) {
       let [temp] = calcString.match(intBeforeOperand);
       [temp] = temp.match(wholeOperand);
       return [operand1, temp.trim()];
