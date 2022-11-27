@@ -1,7 +1,5 @@
-import uuid from "react-uuid";
-
-import RenderAbsoluteVars from "./RenderAbsoluteVars";
-import RenderCalcVars from "./RenderCalcVars";
+import HandleCalcVar from "../utils/HandleCalcVar";
+import AddVarToLocal from "../utils/AddVarToLocal";
 
 /**
  * componenet to render varaible
@@ -13,9 +11,11 @@ function CssVar(arg) {
   const temp = arg.param.userInput;
   const pattern = /calc\((.*)\)/g;
   if (pattern.test(arg.param.userInput)) {
-    return <RenderCalcVars param={arg.param.userInput} />;
+    HandleCalcVar(arg.param.userInput);
+    return <div className="css-var calculated">{arg.param.userInput}</div>;
   } else {
-    return <RenderAbsoluteVars param={arg.param.userInput} />;
+    AddVarToLocal(arg.param.userInput);
+    return <div className="css-var absolute">{arg.param.userInput}</div>;
   }
 }
 
