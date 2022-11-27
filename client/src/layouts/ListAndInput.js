@@ -12,8 +12,8 @@ import InputBox from "../components/InputBox";
 
 function ListAndInput() {
   const [items, setItems] = useState([
-    "--h1: 10vw;",
-    "--h2: calc(var(--h1) * 0.8);",
+    { id: "a1", userInput: "--h1: 10vw;" },
+    { id: "a2", userInput: "--h2: calc(var(--h1) * 0.8);" },
   ]);
   return (
     <div className="list-and-input">
