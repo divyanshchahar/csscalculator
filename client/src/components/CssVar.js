@@ -5,16 +5,18 @@ import RenderCalcVars from "./RenderCalcVars";
 
 /**
  * componenet to render varaible
- * @param {string} args - string of varaible
- * @returns {HTMl componenet}
+ * @param {object} arg - list item
+ * @returns {HTMl}
  */
 
-function CssVar(args) {
+function CssVar(arg) {
+  const temp = arg.param.userInput;
+  console.log(temp);
   const pattern = /calc\((.*)\)/g;
-  if (pattern.test(args.param)) {
-    return <RenderCalcVars param={args.param} />;
+  if (pattern.test(arg.param)) {
+    return <RenderCalcVars param={arg.param.userInput} />;
   } else {
-    return <RenderAbsoluteVars param={args.param} />;
+    return <RenderAbsoluteVars param={arg.param.userInput} />;
   }
 }
 
