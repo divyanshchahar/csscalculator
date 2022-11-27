@@ -11,9 +11,8 @@ import RenderCalcVars from "./RenderCalcVars";
 
 function CssVar(arg) {
   const temp = arg.param.userInput;
-  console.log(temp);
   const pattern = /calc\((.*)\)/g;
-  if (pattern.test(arg.param)) {
+  if (pattern.test(arg.param.userInput)) {
     return <RenderCalcVars param={arg.param.userInput} />;
   } else {
     return <RenderAbsoluteVars param={arg.param.userInput} />;
