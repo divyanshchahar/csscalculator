@@ -2,6 +2,9 @@ import HandleCalcVar from "../utils/HandleCalcVar";
 import AddVarToLocal from "../utils/AddVarToLocal";
 import UpdateBox from "./UpdateBox";
 
+import DeleteButton from "./DeleteButton";
+import ExportCssButton from "./ExportCssButton";
+
 import { useState } from "react";
 
 /**
@@ -28,22 +31,28 @@ function CssVar(args) {
     if (pattern.test(item.userInput)) {
       HandleCalcVar(item.userInput);
       return (
-        <div
-          className="css-var calculated"
-          onClick={() => setIsEditable(!isEditable)}
-        >
-          {item.userInput}
-        </div>
+        <>
+          <div
+            className="css-var calculated"
+            onClick={() => setIsEditable(!isEditable)}
+          >
+            {item.userInput}
+          </div>
+          <DeleteButton params={[item.id, stateVar, stateFunc]} />
+        </>
       );
     } else {
       AddVarToLocal(item.userInput);
       return (
-        <div
-          className="css-var absolute"
-          onClick={() => setIsEditable(!isEditable)}
-        >
-          {item.userInput}
-        </div>
+        <>
+          <div
+            className="css-var absolute"
+            onClick={() => setIsEditable(!isEditable)}
+          >
+            {item.userInput}
+          </div>
+          <DeleteButton params={[item.id, stateVar, stateFunc]} />
+        </>
       );
     }
   }
