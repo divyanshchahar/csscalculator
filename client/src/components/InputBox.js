@@ -8,7 +8,7 @@ import { useState } from "react";
  */
 
 function InputBox(args) {
-  const [stateVar, stateFunc] = args.param;
+  const [stateVar, stateFunc] = args.params;
   const [inputString, setInputString] = useState();
 
   return (
