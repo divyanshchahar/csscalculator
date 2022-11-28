@@ -18,6 +18,10 @@
   --m1_5: 5vh;
   --m2_5: 5vw;
 
+  --m5: 1rem;
+
+  --w6: 1.5rem;
+
   /* COLOR */
   --hover1: rgba(0, 0, 255, 0.1);
 }
@@ -50,6 +54,8 @@
 }
 
 .css-var {
+  float: left;
+  clear: both;
   font-size: var(--fs3);
   margin: var(--m3);
   padding-left: var(--p3);
@@ -67,6 +73,14 @@
   border-left: var(--b4) solid green;
 }
 
+.inline-button {
+  float: right;
+  margin: 0 0 0 var(--m5);
+}
+
+.inline-icon {
+  width: var(--w6);
+}
 /* 
 ##################
 # TOUCH DISPLAYS #
