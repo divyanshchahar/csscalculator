@@ -17,6 +17,9 @@
 
   --m1_5: 5vh;
   --m2_5: 5vw;
+
+  /* COLOR */
+  --hover1: rgba(0, 0, 255, 0.1);
 }
 
 .branding {
@@ -41,10 +44,19 @@
   justify-content: space-between;
 }
 
+.list-and-input {
+  padding: var(--m1_5) 0 var(--m2_5) var(--m1_5);
+  width: fit-content;
+}
+
 .css-var {
   font-size: var(--fs3);
   margin: var(--m3);
   padding-left: var(--p3);
+}
+
+.css-var:hover {
+  background-color: var(--hover1);
 }
 
 .calculated {
@@ -54,16 +66,6 @@
 .absolute {
   border-left: var(--b4) solid green;
 }
-
-.list-and-input {
-  padding: var(--m1_5) 0 var(--m2_5) var(--m1_5);
-  width: fit-content;
-}
-
-/* .list-of-vars {
-  padding: var(--m1_5) 0 var(--m2_5) var(--m1_5);
-  width: fit-content;
-} */
 
 /* 
 ##################

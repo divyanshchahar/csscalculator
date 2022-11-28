@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from "uuid";
+
 /**
  * Function to add to the list of variables
  * @param {eventObject} e - event object passed from text input
@@ -6,7 +8,7 @@
  */
 function CreateListItem(e, stateVar, stateFunc) {
   if (e.key === "Enter") {
-    stateFunc([...stateVar, e.target.value]);
+    stateFunc([...stateVar, { id: uuidv4(), userInput: e.target.value }]);
   }
 }
 

@@ -1,20 +1,51 @@
-import uuid from "react-uuid";
+import HandleCalcVar from "../utils/HandleCalcVar";
+import AddVarToLocal from "../utils/AddVarToLocal";
+import UpdateBox from "./UpdateBox";
 
-import RenderAbsoluteVars from "./RenderAbsoluteVars";
-import RenderCalcVars from "./RenderCalcVars";
+import { useState } from "react";
 
 /**
  * componenet to render varaible
- * @param {string} args - string of varaible
- * @returns {HTMl componenet}
+ * @param {array} args - an array comprised of `single state variable` , `array of state variables` and `state function`
+ * @returns {HTMl}
  */
 
 function CssVar(args) {
+  const [item, stateVar, stateFunc] = args.params;
   const pattern = /calc\((.*)\)/g;
-  if (pattern.test(args.param)) {
-    return <RenderCalcVars param={args.param} />;
+
+  const [isEditable, setIsEditable] = useState();
+
+  if (isEditable) {
+    return (
+      <div className="css-var">
+        <UpdateBox
+          param={[item, stateVar, stateFunc, isEditable, setIsEditable]}
+        />
+      </div>
+    );
   } else {
-    return <RenderAbsoluteVars param={args.param} />;
+    if (pattern.test(item.userInput)) {
+      HandleCalcVar(item.userInput);
+      return (
+        <div
+          className="css-var calculated"
+          onClick={() => setIsEditable(!isEditable)}
+        >
+          {item.userInput}
+        </div>
+      );
+    } else {
+      AddVarToLocal(item.userInput);
+      return (
+        <div
+          className="css-var absolute"
+          onClick={() => setIsEditable(!isEditable)}
+        >
+          {item.userInput}
+        </div>
+      );
+    }
   }
 }
 
