@@ -7,7 +7,7 @@ import InputBox from "../components/InputBox";
 
 /**
  * layout to render list of varaibles
- * @returns {HTML components}
+ * @returns {HTML} - div elemet or text input
  */
 
 function ListAndInput() {
@@ -15,18 +15,19 @@ function ListAndInput() {
     { id: "a1", userInput: "--h1: 10vw;" },
     { id: "a2", userInput: "--h2: calc(var(--h1) * 0.8);" },
   ]);
+
   return (
     <div className="list-and-input">
       {items ? (
         <div className="list-of-vars">
           {items.map((item) => {
-            return <CssVar param={item} />;
+            return <CssVar params={[item, items, setItems]} />;
           })}
         </div>
       ) : (
-        <div>no variables added</div>
+        <div className="list-and-input">no variables added</div>
       )}
-      <InputBox param={[items, setItems]} />
+      <InputBox params={[items, setItems]} />
     </div>
   );
 }
