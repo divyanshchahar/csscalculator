@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 // IMPORTING CUSTOM FUNCTIONALITY
-import CssVar from "../components/CssVar";
+import CssVar from "./CssVar";
 import InputBox from "../components/InputBox";
 
 /**

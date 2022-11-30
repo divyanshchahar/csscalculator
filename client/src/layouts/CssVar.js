@@ -1,9 +1,10 @@
 import HandleCalcVar from "../utils/HandleCalcVar";
 import AddVarToLocal from "../utils/AddVarToLocal";
-import UpdateBox from "./UpdateBox";
+import UpdateBox from "../components/UpdateBox";
 
-import DeleteButton from "./DeleteButton";
-import ExportCssButton from "./ExportCssButton";
+import DeleteButton from "../components/DeleteButton";
+// import DeleteButton from "./DeleteButton";
+// import ExportCssButton from "./ExportCssButton";
 
 import { useState } from "react";
 
