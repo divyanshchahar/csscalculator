@@ -18,7 +18,6 @@ function InputBox(args) {
       onChange={(e) => setInputString(e.target.value)}
       onKeyDown={(e) => {
         if (e.key === "Enter" && e.target.value.length > 0) {
-          console.log(e.target.value);
           HandleUserInput(e.target.value, stateVar, stateFunc);
           setInputString("");
         }
