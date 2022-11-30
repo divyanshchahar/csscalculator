@@ -12,7 +12,7 @@ function CheckUnits(arg) {
   if (pattern1.test(arg) || pattern2.test(arg)) {
     return true;
   } else {
-    return false;
+    return "invalid unit";
   }
 }
 
