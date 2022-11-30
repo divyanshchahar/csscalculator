@@ -24,8 +24,8 @@ function UpdateBox(args) {
         setUserInput(e.target.value);
       }}
       onKeyDown={(e) => {
-        UpdateListItem(e, item.id, stateVar, stateFunc);
-        if (e.key === "Enter") {
+        if (e.key === "Enter" && e.target.value.length > 0) {
+          UpdateListItem(e.target.value, item.id, stateVar, stateFunc);
           setIsEditable(!isEditable);
         }
       }}

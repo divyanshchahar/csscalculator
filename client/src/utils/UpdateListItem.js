@@ -6,16 +6,14 @@
  * @param {function} satateFunc - state function
  */
 
-function UpdateListItem(e, itemID, stateVar, satateFunc) {
-  if (e.key === "Enter") {
-    const newArr = stateVar.map((item) => {
-      if (item.id === itemID) {
-        return { ...item, userInput: e.target.value };
-      }
-      return item;
-    });
-    satateFunc(newArr);
-  }
+function UpdateListItem(inputString, itemID, stateVar, satateFunc) {
+  const newArr = stateVar.map((item) => {
+    if (item.id === itemID) {
+      return { ...item, userInput: inputString };
+    }
+    return item;
+  });
+  satateFunc(newArr);
 }
 
 export default UpdateListItem;
