@@ -1,4 +1,4 @@
-import CreateListItem from "../utils/CreateListItem";
+import HandleUserInput from "../utils/HandleUserInput";
 
 import { useState } from "react";
 
@@ -19,7 +19,7 @@ function InputBox(args) {
       onKeyDown={(e) => {
         if (e.key === "Enter" && e.target.value.length > 0) {
           console.log(e.target.value);
-          CreateListItem(e.target.value, stateVar, stateFunc);
+          HandleUserInput(e.target.value, stateVar, stateFunc);
           setInputString("");
         }
       }}

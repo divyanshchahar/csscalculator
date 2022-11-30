@@ -6,8 +6,8 @@ import { v4 as uuidv4 } from "uuid";
  * @param {state variable} stateVar - state variable
  * @param {state Function} stateFunc - state function which will be used to change the state function
  */
-function CreateListItem(inputstring, stateVar, stateFunc) {
+function HandleUserInput(inputstring, stateVar, stateFunc) {
   stateFunc([...stateVar, { id: uuidv4(), userInput: inputstring }]);
 }
 
-export default CreateListItem;
+export default HandleUserInput;
