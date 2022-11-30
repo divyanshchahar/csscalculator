@@ -17,8 +17,11 @@ function InputBox(args) {
       value={inputString}
       onChange={(e) => setInputString(e.target.value)}
       onKeyDown={(e) => {
-        CreateListItem(e, stateVar, stateFunc);
-        if (e.key === "Enter") setInputString("");
+        if (e.key === "Enter" && e.target.value.length > 0) {
+          console.log(e.target.value);
+          CreateListItem(e.target.value, stateVar, stateFunc);
+          setInputString("");
+        }
       }}
     />
   );
