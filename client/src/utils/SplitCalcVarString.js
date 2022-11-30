@@ -1,16 +1,16 @@
 /**
- * splits string cooming form calculated variable
- * @param {string} arg - string in the form _--varname: calc(__calculation__);_
- * @returns {array} - array contaning variable name and calculation string in the for _calc(__calculation__)_
+ * Splits the sting using colon(__:__) and removes whitespace and semicolon (__;__)
+ * @param {string} arg - input string form the user
+ * @returns {array} - array of two strings
  */
 
-function SplitCalcVarString(arg) {
-  let [varName, calcString] = arg.split(":");
+function SplitByColon(arg) {
+  let [varName, string2] = arg.split(":");
   varName = varName.trim();
-  calcString = calcString.trim();
-  calcString = calcString.replace(";", "");
+  string2 = string2.trim();
+  string2 = string2.replace(";", "");
 
-  return [varName, calcString];
+  return [varName, string2];
 }
 
-export default SplitCalcVarString;
+export default SplitByColon;
