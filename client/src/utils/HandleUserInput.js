@@ -1,4 +1,6 @@
-import { v4 as uuidv4 } from "uuid";
+// import { v4 as uuidv4 } from "uuid";
+import GenerateCalcVarFromInput from "./GenerateCalcVarFromInput";
+import GenerateAbsoluteFromInput from "./GenerateAbsoluteFromInput";
 
 /**
  * Function to add to the list of variables
@@ -7,7 +9,14 @@ import { v4 as uuidv4 } from "uuid";
  * @param {state Function} stateFunc - state function which will be used to change the state function
  */
 function HandleUserInput(inputstring, stateVar, stateFunc) {
-  stateFunc([...stateVar, { id: uuidv4(), userInput: inputstring }]);
+  const pattern = /calc/g;
+  if (pattern.test(inputstring)) {
+    GenerateCalcVarFromInput(inputstring, stateVar, stateFunc);
+  } else {
+    GenerateAbsoluteFromInput(inputstring, stateVar, stateFunc);
+  }
+
+  // stateFunc([...stateVar, { id: uuidv4(), userInput: inputstring }]);
 }
 
 export default HandleUserInput;
