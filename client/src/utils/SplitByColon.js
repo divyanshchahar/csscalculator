@@ -1,5 +1,5 @@
 /**
- * Splits the sting using colon(__:__) and removes whitespace and semicolon (__;__)
+ * Splits the sting using colon(__:__) and removes whitespace and semicolon (__;__)SplitByColon
  * @param {string} arg - input string form the user
  * @returns {array} - array of two strings
  */
