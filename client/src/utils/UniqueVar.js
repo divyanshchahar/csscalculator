@@ -8,7 +8,7 @@ function UniqueVar(varName, stateVars) {
   let isUnique = true;
   stateVars.map((item) => {
     if (item.varName == varName) {
-      isUnique = false;
+      isUnique = "variable name should be unique";
     }
   });
   return isUnique;
