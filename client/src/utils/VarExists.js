@@ -2,7 +2,7 @@
  * Checks if the variable name exists in the list of variable
  * @param {string} varName - name of the variable
  * @param {array} stateVars - array of state variables
- * @returns {boolean} - `true` if the variable name is unique or `false` if the variable name is not unique
+ * @returns {boolean} - `true` if the variable name is unique or error message if the variable name is not unique
  */
 
 function VarExists(varName, stateVars) {
