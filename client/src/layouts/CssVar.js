@@ -18,7 +18,7 @@ function CssVar(args) {
   const [item, stateVar, stateFunc] = args.params;
   const pattern = /calc\((.*)\)/g;
 
-  const [isEditable, setIsEditable] = useState();
+  const [isEditable, setIsEditable] = useState(false);
 
   if (isEditable) {
     return (
