@@ -19,19 +19,21 @@ function ErrorVar(args) {
 
   if (isEditable) {
     return (
-      <div className="css-var">
-        <UpdateBox
-          param={[item, stateVar, stateFunc, isEditable, setIsEditable]}
-        />
-      </div>
+      <>
+        <div className="css-var">
+          <UpdateBox
+            param={[item, stateVar, stateFunc, isEditable, setIsEditable]}
+          />
+        </div>
+      </>
     );
   } else {
-    <>
-      <div className="css-var error" onClick={() => setIsEditable(!isEditable)}>
-        {item.userInput}
-      </div>
-      <DeleteButton params={[item.id, stateVar, stateFunc]} />
-    </>;
+    return (
+      <>
+        <div className="css-var error">{item.userInput}</div>
+        <DeleteButton params={[item.id, stateVar, stateFunc]} />
+      </>
+    );
   }
 }
 
