@@ -3,6 +3,7 @@ import { useState } from "react";
 
 // IMPORTING CUSTOM FUNCTIONALITY
 import CssVar from "./CssVar";
+import ErrorVar from "./ErrorVar";
 import InputBox from "../components/InputBox";
 
 /**
@@ -35,7 +36,11 @@ function ListAndInput() {
       {items ? (
         <div className="list-of-vars">
           {items.map((item) => {
-            return <CssVar params={[item, items, setItems]} />;
+            if (item.hasError) {
+              return <ErrorVar params={(item, items, setItems)} />;
+            } else {
+              return <CssVar params={[item, items, setItems]} />;
+            }
           })}
         </div>
       ) : (
