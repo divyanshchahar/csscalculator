@@ -1,5 +1,5 @@
 // IMPORTING REACT FUNCTINALITY
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 // IMPORTING CUSTOM FUNCTIONALITY
 import CssVar from "./CssVar";
@@ -30,10 +30,6 @@ function ListAndInput() {
       userInput: "--h2: calc(var(--h1) * 0.5);",
     },
   ]);
-
-  useEffect(() => {
-    console.log(items);
-  }, [items]);
 
   return (
     <div className="list-and-input">
