@@ -1,5 +1,5 @@
 // IMPORTING REACT FUNCTINALITY
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // IMPORTING CUSTOM FUNCTIONALITY
 import CssVar from "./CssVar";
@@ -31,13 +31,17 @@ function ListAndInput() {
     },
   ]);
 
+  useEffect(() => {
+    console.log(items);
+  }, [items]);
+
   return (
     <div className="list-and-input">
       {items ? (
         <div className="list-of-vars">
           {items.map((item) => {
             if (item.hasError) {
-              return <ErrorVar params={(item, items, setItems)} />;
+              return <ErrorVar params={[item, items, setItems]} />;
             } else {
               return <CssVar params={[item, items, setItems]} />;
             }
