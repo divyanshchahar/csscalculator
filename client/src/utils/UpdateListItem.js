@@ -1,3 +1,6 @@
+import UpdateAbsoluteFromInput from "./UpdateAbsoluteFromInput";
+import UpdateCalcFromInput from "./UpdateCalcFromInput";
+
 /**
  * Function to change the `userInput` of the state object
  * @param {event object} e - event object from text input
@@ -6,14 +9,13 @@
  * @param {function} satateFunc - state function
  */
 
-function UpdateListItem(inputString, itemID, stateVar, satateFunc) {
-  const newArr = stateVar.map((item) => {
-    if (item.id === itemID) {
-      return { ...item, userInput: inputString };
-    }
-    return item;
-  });
-  satateFunc(newArr);
+function HandleUpdate(inputString, itemID, stateVar, satateFunc) {
+  const pattern = /calc/g;
+  if (pattern.test(inputString)) {
+    UpdateCalcFromInput(itemID, inputString, stateVar, satateFunc);
+  } else {
+    UpdateAbsoluteFromInput(itemID, inputString, stateVar, satateFunc);
+  }
 }
 
-export default UpdateListItem;
+export default HandleUpdate;
