@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import UpdateListItem from "../utils/UpdateListItem";
+import HandleUpdate from "../utils/HandleUpdate";
 
 /**
  * Componenet to take user input for updating list items
@@ -24,8 +24,8 @@ function UpdateBox(args) {
         setUserInput(e.target.value);
       }}
       onKeyDown={(e) => {
-        UpdateListItem(e, item.id, stateVar, stateFunc);
-        if (e.key === "Enter") {
+        if (e.key === "Enter" && e.target.value.length > 0) {
+          HandleUpdate(e.target.value, item.id, stateVar, stateFunc);
           setIsEditable(!isEditable);
         }
       }}

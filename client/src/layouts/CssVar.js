@@ -18,7 +18,7 @@ function CssVar(args) {
   const [item, stateVar, stateFunc] = args.params;
   const pattern = /calc\((.*)\)/g;
 
-  const [isEditable, setIsEditable] = useState();
+  const [isEditable, setIsEditable] = useState(false);
 
   if (isEditable) {
     return (
@@ -33,26 +33,20 @@ function CssVar(args) {
       HandleCalcVar(item.userInput);
       return (
         <>
-          <div
-            className="css-var calculated"
-            onClick={() => setIsEditable(!isEditable)}
-          >
-            {item.userInput}
+          <div className="css-var" onClick={() => setIsEditable(!isEditable)}>
+            <div className="calculated">{item.userInput}</div>
+            <DeleteButton params={[item.id, stateVar, stateFunc]} />
           </div>
-          <DeleteButton params={[item.id, stateVar, stateFunc]} />
         </>
       );
     } else {
       AddVarToLocal(item.userInput);
       return (
         <>
-          <div
-            className="css-var absolute"
-            onClick={() => setIsEditable(!isEditable)}
-          >
-            {item.userInput}
+          <div className="css-var" onClick={() => setIsEditable(!isEditable)}>
+            <div className="absolute">{item.userInput}</div>
+            <DeleteButton params={[item.id, stateVar, stateFunc]} />
           </div>
-          <DeleteButton params={[item.id, stateVar, stateFunc]} />
         </>
       );
     }

@@ -1,4 +1,4 @@
-import SplitCalcVarString from "./SplitCalcVarString";
+import SplitByColon from "./SplitByColon";
 import ResolveVarRefrence from "./ResolveVarRefrence";
 import SplitVarValue from "./SplitVarValue";
 import ExtractOperand from "./ExtractOperand";
@@ -13,7 +13,7 @@ import AddVarToLocal from "./AddVarToLocal";
  */
 
 function HandleCalcVar(arg) {
-  const [varName, calcString] = SplitCalcVarString(arg);
+  const [varName, calcString] = SplitByColon(arg);
   const varValue = ResolveVarRefrence(calcString);
   const [varQuantity, varUnit] = SplitVarValue(varValue);
   const operands = ExtractOperand([varQuantity, calcString]);
