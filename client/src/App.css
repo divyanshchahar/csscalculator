@@ -13,7 +13,7 @@
   --m3: calc(0.25 * var(--fs3));
   --p3: calc(0.25 * var(--fs3));
 
-  --b4: calc(0.25 * var(--fs3));
+  --b3: calc(0.25 * var(--fs3));
 
   --m1_5: 5vh;
   --m2_5: 5vw;
@@ -54,11 +54,9 @@
 }
 
 .css-var {
-  float: left;
-  clear: both;
-  font-size: var(--fs3);
-  margin: var(--m3);
-  padding-left: var(--p3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .css-var:hover {
@@ -66,15 +64,24 @@
 }
 
 .calculated {
-  border-left: var(--b4) solid grey;
+  font-size: var(--fs3);
+  margin: var(--m3);
+  padding-left: var(--p3);
+  border-left: var(--b3) solid grey;
 }
 
 .absolute {
-  border-left: var(--b4) solid green;
+  font-size: var(--fs3);
+  margin: var(--m3);
+  padding-left: var(--p3);
+  border-left: var(--b3) solid green;
+}
+
+.error {
+  border: 1px solid red;
 }
 
 .inline-button {
-  float: right;
   margin: 0 0 0 var(--m5);
 }
 
@@ -97,7 +104,7 @@
     --m3: calc(0.25 * var(--fs3));
     --p3: calc(0.25 * var(--fs3));
 
-    --b4: calc(0.25 * var(--fs3));
+    --b3: calc(0.25 * var(--fs3));
 
     --m1_5: 5vh;
     --m2_5: 5vw;
@@ -119,7 +126,7 @@
     --m3: calc(0.25 * var(--fs3));
     --p3: calc(0.25 * var(--fs3));
 
-    --b4: calc(0.25 * var(--fs3));
+    --b3: calc(0.25 * var(--fs3));
 
     --m1_5: 5vh;
     --m2_5: 5vw;
