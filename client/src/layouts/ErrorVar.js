@@ -30,8 +30,15 @@ function ErrorVar(args) {
   } else {
     return (
       <>
-        <div className="css-var error">{item.userInput}</div>
-        <DeleteButton params={[item.id, stateVar, stateFunc]} />
+        <div
+          className="css-var error"
+          onClick={() => {
+            setIsEditable(!isEditable);
+          }}
+        >
+          {item.userInput}
+          <DeleteButton params={[item.id, stateVar, stateFunc]} />
+        </div>
       </>
     );
   }
