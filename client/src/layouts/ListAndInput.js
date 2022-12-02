@@ -1,10 +1,12 @@
 // IMPORTING REACT FUNCTINALITY
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // IMPORTING CUSTOM FUNCTIONALITY
 import CssVar from "./CssVar";
 import ErrorVar from "./ErrorVar";
 import InputBox from "../components/InputBox";
+import GetFromLocalStorage from "../utils/GetFromLocalStorage";
+import UpdateLocalStorage from "../utils/UpdateLocalStorage";
 
 /**
  * layout to render list of varaibles
@@ -12,24 +14,35 @@ import InputBox from "../components/InputBox";
  */
 
 function ListAndInput() {
-  const [items, setItems] = useState([
-    {
-      id: "a1",
-      varName: "--h1",
-      varValue: "80vw",
-      hasError: false,
-      errorMessage: null,
-      userInput: "--h1: 80vw;",
-    },
-    {
-      id: "c1",
-      varName: "--h2",
-      varValue: "40vw",
-      hasError: false,
-      errorMessage: null,
-      userInput: "--h2: calc(var(--h1) * 0.5);",
-    },
-  ]);
+  // const [items, setItems] = useState([
+  //   {
+  //     id: "a1",
+  //     varName: "--h1",
+  //     varValue: "80vw",
+  //     hasError: false,
+  //     errorMessage: null,
+  //     userInput: "--h1: 80vw;",
+  //   },
+  //   {
+  //     id: "c1",
+  //     varName: "--h2",
+  //     varValue: "40vw",
+  //     hasError: false,
+  //     errorMessage: null,
+  //     userInput: "--h2: calc(var(--h1) * 0.5);",
+  //   },
+  // ]);
+
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    GetFromLocalStorage(setItems);
+  }, []);
+
+  useEffect(() => {
+    // console.log(items);
+    UpdateLocalStorage(items);
+  }, [items]);
 
   return (
     <div className="list-and-input">

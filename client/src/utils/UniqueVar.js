@@ -6,11 +6,15 @@
  */
 function UniqueVar(varName, stateVars) {
   let isUnique = true;
-  stateVars.map((item) => {
-    if (item.varName == varName) {
-      isUnique = "variable name should be unique";
-    }
-  });
+  try {
+    stateVars.map((item) => {
+      if (item.varName == varName) {
+        isUnique = "variable name should be unique";
+      }
+    });
+  } catch (err) {
+    return isUnique;
+  }
   return isUnique;
 }
 
