@@ -1,5 +1,5 @@
-import HandleCalcVar from "../utils/HandleCalcVar";
-import AddVarToLocal from "../utils/AddVarToLocal";
+// import HandleCalcVar from "../utils/HandleCalcVar";
+// import AddVarToLocal from "../utils/AddVarToLocal";
 import UpdateBox from "../components/UpdateBox";
 
 import DeleteButton from "../components/DeleteButton";
@@ -30,7 +30,7 @@ function CssVar(args) {
     );
   } else {
     if (pattern.test(item.userInput)) {
-      HandleCalcVar(item.userInput);
+      // HandleCalcVar(item.userInput);
       return (
         <>
           <div className="css-var" onClick={() => setIsEditable(!isEditable)}>
@@ -40,7 +40,7 @@ function CssVar(args) {
         </>
       );
     } else {
-      AddVarToLocal(item.userInput);
+      // AddVarToLocal(item.userInput);
       return (
         <>
           <div className="css-var" onClick={() => setIsEditable(!isEditable)}>
