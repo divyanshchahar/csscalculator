@@ -32,6 +32,7 @@ function ErrorVar(args) {
       <>
         <div
           className="css-var error"
+          title={item.errorMessage}
           onClick={() => {
             setIsEditable(!isEditable);
           }}
