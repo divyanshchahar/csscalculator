@@ -8,7 +8,7 @@ function HasColon(arg) {
   if (pattern.test(arg)) {
     return true;
   } else {
-    return "input shouold contain exactly one ;";
+    return "input should contain exactly one ;";
   }
 }
 
