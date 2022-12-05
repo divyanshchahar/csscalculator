@@ -18,7 +18,7 @@ function ExtractOperand(operand1, calcString) {
     if (decimalBeforeOperand.test(calcString)) {
       let [temp] = calcString.match(decimalBeforeOperand);
       [temp] = temp.match(decimalOperand);
-      return [operand1, temp.trim()];
+      return [temp.trim(), operand1];
     }
 
     if (decimalAfterOperand.test(calcString)) {
@@ -36,7 +36,7 @@ function ExtractOperand(operand1, calcString) {
     if (intBeforeOperand.test(calcString)) {
       let [temp] = calcString.match(intBeforeOperand);
       [temp] = temp.match(wholeOperand);
-      return [operand1, temp.trim()];
+      return [temp.trim(), operand1];
     }
   }
 }
