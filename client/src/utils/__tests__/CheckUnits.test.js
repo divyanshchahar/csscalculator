@@ -49,14 +49,6 @@ describe("Testing CheckUnits", () => {
     expect(CheckUnits("10rem")).toBeTruthy();
   });
 
-  // it("Passing 10vw should resolve to be true", () => {
-  //   expect(CheckUnits("10vw")).toBeTruthy();
-  // });
-
-  // it("Passing 10vh should resolve to be true", () => {
-  //   expect(CheckUnits("10vh")).toBeTruthy();
-  // });
-
   it("Passing 10vmin should resolve to be true", () => {
     expect(CheckUnits("10vvmin")).toBeTruthy();
   });
@@ -73,7 +65,7 @@ describe("Testing CheckUnits", () => {
     expect(CheckUnits("0")).toBeTruthy();
   });
 
-  it("Passing 2xyz should resolve to be true", () => {
+  it("Passing 2xyz should return error message", () => {
     expect(CheckUnits("2xyz")).toBe("invalid unit");
   });
 });
