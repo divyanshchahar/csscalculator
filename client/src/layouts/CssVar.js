@@ -1,15 +1,12 @@
-// import HandleCalcVar from "../utils/HandleCalcVar";
-// import AddVarToLocal from "../utils/AddVarToLocal";
+// IMPORTING FUNCTIONALITY
 import UpdateBox from "../components/UpdateBox";
-
 import DeleteButton from "../components/DeleteButton";
-// import DeleteButton from "./DeleteButton";
-// import ExportCssButton from "./ExportCssButton";
 
+// I PORTING REACR FUNCTIONALITY
 import { useState } from "react";
 
 /**
- * componenet to render varaible
+ * Layout to render varaible and delete button
  * @param {array} args - an array comprised of `single state variable` , `array of state variables` and `state function`
  * @returns {HTMl}
  */
@@ -30,7 +27,6 @@ function CssVar(args) {
     );
   } else {
     if (pattern.test(item.userInput)) {
-      // HandleCalcVar(item.userInput);
       return (
         <>
           <div className="css-var" onClick={() => setIsEditable(!isEditable)}>
@@ -40,7 +36,6 @@ function CssVar(args) {
         </>
       );
     } else {
-      // AddVarToLocal(item.userInput);
       return (
         <>
           <div className="css-var" onClick={() => setIsEditable(!isEditable)}>
