@@ -1,7 +1,7 @@
 /**
- * Checks if the variable name is unique
- * @param {*} varName
- * @param {*} stateVars
+ * Function to check if the variable name is unique
+ * @param {string} varName - name of the varaible
+ * @param {array} stateVars - array of state varaibles
  * @returns {boolean} - `true` if the variable name is unique or `false` if the variable name is not unique
  */
 function UniqueVar(varName, stateVars) {
