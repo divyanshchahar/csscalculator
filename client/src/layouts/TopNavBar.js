@@ -2,7 +2,7 @@ import BrandingContainer from "../components/BrandingContainer";
 import ExportCssButton from "../components/ExportCssButton";
 
 /**
- * layout to render Top NAvigation Bar
+ * Layout to render Top Navigation Bar
  * @returns {HTML componenets}
  */
 
