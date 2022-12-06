@@ -1,5 +1,5 @@
 /**
- * Function to update loal storage
+ * Function to update local storage
  * @param {array} arg - array of state variables
  */
 
