@@ -1,6 +1,6 @@
 /**
- * Extracts variable name from "calc(_calculation_)"
- * @param {string} arg - string containing calc(_calculation_) string
+ * Function to extracts variable name from __calc(_calculation_)__ string
+ * @param {string} arg - string of type __calc(_calculation_)__
  * @returns {string} string contaning the extracted variable name
  */
 
