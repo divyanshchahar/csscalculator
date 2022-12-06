@@ -1,7 +1,7 @@
 /**
- * Checks for presence of a single colon (__;__) in the string
+ * Function to check for presence of a single colon (__;__) in the string
  * @param {string} arg - input striing from the user
- * @returns `true` if the string has semicolon (__;__) otherwise returns error message
+ * @returns `true` if the string has semicolon (__;__) otherwise returns error message __input shouold contain exactly one :__
  */
 function HasSemiColon(arg) {
   const pattern = /\:/g;
