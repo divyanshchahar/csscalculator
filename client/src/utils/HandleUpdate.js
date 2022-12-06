@@ -3,10 +3,10 @@ import UpdateCalcFromInput from "./UpdateCalcFromInput";
 
 /**
  * Function to change the `userInput` of the state object
- * @param {event object} e - event object from text input
+ * @param {string} inputString - string from text input
  * @param {string} itemID - `id` of the object whose `userInput` needs to be changed
- * @param {array} stateVar - state varible
- * @param {function} satateFunc - state function
+ * @param {array} stateVar - array of state varible
+ * @param {function} satateFunc - function to hange state varaibles
  */
 
 function HandleUpdate(inputString, itemID, stateVar, satateFunc) {

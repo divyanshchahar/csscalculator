@@ -9,30 +9,11 @@ import GetFromLocalStorage from "../utils/GetFromLocalStorage";
 import UpdateLocalStorage from "../utils/UpdateLocalStorage";
 
 /**
- * layout to render list of varaibles
+ * Layout to render list of varaibles
  * @returns {HTML} - div elemet or text input
  */
 
 function ListAndInput() {
-  // const [items, setItems] = useState([
-  //   {
-  //     id: "a1",
-  //     varName: "--h1",
-  //     varValue: "80vw",
-  //     hasError: false,
-  //     errorMessage: null,
-  //     userInput: "--h1: 80vw;",
-  //   },
-  //   {
-  //     id: "c1",
-  //     varName: "--h2",
-  //     varValue: "40vw",
-  //     hasError: false,
-  //     errorMessage: null,
-  //     userInput: "--h2: calc(var(--h1) * 0.5);",
-  //   },
-  // ]);
-
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -40,7 +21,6 @@ function ListAndInput() {
   }, []);
 
   useEffect(() => {
-    // console.log(items);
     UpdateLocalStorage(items);
   }, [items]);
 

@@ -1,5 +1,5 @@
 /**
- * Checks for presence of a single colon (__:__) in the string
+ * Function to check for presence of a single colon (__:__) in the string
  * @param {string} arg - input string from the user
  * @returns `true` if the string has colon (__:__) otherwise returns error message
  */

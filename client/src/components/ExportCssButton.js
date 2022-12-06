@@ -1,9 +1,12 @@
-import fileIcon from "../assets/file_save_icon.svg";
+// IMPORTING FUNCTIONALITY
 import HandleGenerateFile from "../utils/HandleGenerateFile";
 
+// IMPORTING ASSETS``
+import fileIcon from "../assets/file_save_icon.svg";
+
 /**
- * componenet to render export button
- * @returns {HTML Componenet}
+ * Componenet to render export button
+ * @returns {HTML}
  */
 
 function ExportCssButton() {

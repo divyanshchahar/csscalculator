@@ -15,7 +15,7 @@ import GenerateErrorObject from "./GenerateErrorObject";
 import GenerateGoodObject from "./GenerateGoodObject";
 
 /**
- *
+ * Function to update calculated varaibles
  * @param {string} itemID - id of the object which neeeds to be updated
  * @param {string} inputString - user input
  * @param {array} stateVar - array of state variables

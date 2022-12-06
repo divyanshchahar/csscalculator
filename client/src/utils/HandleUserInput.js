@@ -4,9 +4,9 @@ import GenerateAbsoluteFromInput from "./GenerateAbsoluteFromInput";
 
 /**
  * Function to add to the list of variables
- * @param {eventObject} e - event object passed from text input
- * @param {state variable} stateVar - state variable
- * @param {state Function} stateFunc - state function which will be used to change the state function
+ * @param {string} inputstring - input from the user
+ * @param {array} stateVar - array of state variable
+ * @param {function} stateFunc - function to change state varaible
  */
 function HandleUserInput(inputstring, stateVar, stateFunc) {
   const pattern = /calc/g;
@@ -15,8 +15,6 @@ function HandleUserInput(inputstring, stateVar, stateFunc) {
   } else {
     GenerateAbsoluteFromInput(inputstring, stateVar, stateFunc);
   }
-
-  // stateFunc([...stateVar, { id: uuidv4(), userInput: inputstring }]);
 }
 
 export default HandleUserInput;

@@ -1,7 +1,7 @@
 /**
- *
- * @param {array} operands - array consisting of operands 1 and 2 as two seperate __string__
- * @param {string} operator - array consisting of operand as a __string__
+ * Functio to perform binary operation
+ * @param {array} operands - array consisting of operands 1 and 2 as two seperate string
+ * @param {string} operator - array consisting of operand as a string
  * @returns {number} - result of calculation
  */
 

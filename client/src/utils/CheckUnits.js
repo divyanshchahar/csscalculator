@@ -1,7 +1,7 @@
 /**
- * checks for valid css units, returns true if unit is valid, otherwise it return false
+ * Function to check for valid css units, returns `true` if unit is valid, otherwise it return error message
  * @param {string} arg string containing variable quantity and unit
- * @returns
+ * @returns - `true` if the unit is valid or error message __invalid string__ if unit is not valid
  */
 
 function CheckUnits(arg) {

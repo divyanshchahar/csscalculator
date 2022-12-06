@@ -1,8 +1,8 @@
 /**
- * Function to get variable value
+ * Function to get variable value from list of varaibles
  * @param {string} refreneVar - variable name
  * @param {array} stateVar - array containing state variables
- * @returns - value of the variable
+ * @returns {string} value of the variable
  */
 
 function GetVarValue(refreneVar, stateVar) {

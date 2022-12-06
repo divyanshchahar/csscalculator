@@ -16,9 +16,9 @@ import GenerateValueString from "./GenerateValueString";
 import { v4 as uuidv4 } from "uuid";
 
 /**
- * Function to add calculated variables
+ * Function to generate new calculated variables from user input
  * @param {string} inputString - string of user input
- * @param {array} stateVar - array of stateVariables
+ * @param {array} stateVar - array of state variables
  * @param {function} stateFunc - function to modify state variable
  */
 

@@ -1,7 +1,7 @@
 /**
- * extracts operator
- * @param {string} arg - calculation string of for _calc(__calculation__)_
- * @returns
+ * Function to extract operator
+ * @param {string} arg - calculation string of form __calc(_calculation_)__
+ * @returns {string} - binary operator used in calculation
  */
 
 function ExtractOperator(arg) {

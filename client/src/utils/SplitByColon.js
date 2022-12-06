@@ -1,5 +1,5 @@
 /**
- * Splits the sting using colon(__:__) and removes whitespace and semicolon (__;__)SplitByColon
+ * Function to split the string using colon (__:__) and remove semi-colon(__;__)
  * @param {string} arg - input string form the user
  * @returns {array} - array of two strings
  */

@@ -1,13 +1,12 @@
+// IMPORTING FUNCTIONALITY
 import UpdateBox from "../components/UpdateBox";
-
 import DeleteButton from "../components/DeleteButton";
-// import DeleteButton from "./DeleteButton";
-// import ExportCssButton from "./ExportCssButton";
 
+// IMPORTING REACR FUNCTIONALITY
 import { useState } from "react";
 
 /**
- * componenet to render varaible
+ * Layout to render errournous varaible and delete button
  * @param {array} args - an array comprised of `single state variable` , `array of state variables` and `state function`
  * @returns {HTMl}
  */

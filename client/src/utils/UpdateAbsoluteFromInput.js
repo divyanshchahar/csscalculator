@@ -8,11 +8,10 @@ import GenerateGoodObject from "./GenerateGoodObject";
 
 /**
  * Function to update absolute variables
- * @param {string} itemID
- * @param {string} inputString
- * @param {array} stateVar
- * @param {function} stateFunc
- * @returns
+ * @param {string} itemID - `id` of the state object
+ * @param {string} inputString - input from the user
+ * @param {array} stateVar - array of state variable
+ * @param {function} stateFunc - function to midify state variable
  */
 function UpdateAbsoluteFromInput(itemID, inputString, stateVar, stateFunc) {
   const check1 = HasColon(inputString);
