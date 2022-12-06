@@ -1,7 +1,7 @@
 /**
- * Generate an array of operands in the order they ocuur
+ * Function to generate an array of operands in the order they ocuur
  * @param {string} operand1 - resolved value of refrence variable
- * @param {string} calcString - calculation string containing _calc(__calculation__)_
+ * @param {string} calcString - calculation string containing __calc(_calculation_)__
  * @returns {array} array containing operands in the order they occur in calculation string
  */
 
