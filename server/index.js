@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 
 app.post("/", (req, res) => {
   handlePost(req.body);
-  res.send("Hello");
+  res.sendStatus(201);
 });
 
 app.listen(3200);
