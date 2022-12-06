@@ -8,10 +8,10 @@ import CheckUnits from "./CheckUnits";
 import { v4 as uuidv4 } from "uuid";
 
 /**
- * Function to Generate new state object from user input for new varaible
- * @param {string} inputString - input fromthe user
- * @param {*} stateVar - state variable
- * @param {*} stateFunc - function to modify statevaraible
+ * Function to generate new absolute variables from user input for new varaible
+ * @param {string} inputString - input from the user
+ * @param {array} stateVar - array of state variable
+ * @param {function} stateFunc - function to modify statevaraible
  */
 
 function GenerateAbsoluteFromInput(inputString, stateVar, stateFunc) {
