@@ -4,7 +4,7 @@
  * @param {string} inputString - input string fom the user
  * @param {string} errorMessage - error message generated
  * @param {array} stateVar - array of stateVariables
- * @returns {array} = updated array
+ * @returns {array} - updated array
  */
 
 function GenerateErrorObject(itemID, inputString, errorMessage, stateVar) {
