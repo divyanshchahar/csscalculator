@@ -1,8 +1,8 @@
 import brandImage from "../assets/calculator_brand_icon.svg";
 
 /**
- * componenent to render branding
- * @returns {HTML componenet}
+ * Componenent to render branding
+ * @returns {HTML}
  */
 function BrandingContainer() {
   return (
