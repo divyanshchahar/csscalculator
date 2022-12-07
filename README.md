@@ -29,7 +29,7 @@ Into code blocks written like this
 
 # 📸 Screenshot
 
-![screenshot](screenshot.png)
+![screenshot](Screenshot.png)
 
 # How to
 
