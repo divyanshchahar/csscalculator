@@ -15,27 +15,23 @@ import GenerateErrorObject from "./GenerateErrorObject";
 import GenerateGoodObject from "./GenerateGoodObject";
 
 /**
- * Function to update calculated varaibles
+ * Function to update single calculated varaible
  * @param {string} itemID - id of the object which neeeds to be updated
  * @param {string} inputString - user input
  * @param {array} stateVar - array of state variables
- * @param {function} stateFunc - function to modify state variable
- * @returns
  */
 
-function UpdateCalcVarFromInput(itemID, inputString, stateVar, stateFunc) {
+function UpdateCalcVar(itemID, inputString, stateVar) {
   const check1 = HasColon(inputString);
   if (check1 === true) {
   } else {
-    stateFunc(GenerateErrorObject(itemID, inputString, check1, stateVar));
-    return;
+    return GenerateErrorObject(itemID, inputString, check1, stateVar);
   }
 
   const check2 = HasSemiColon(inputString);
   if (check2 === true) {
   } else {
-    stateFunc(GenerateErrorObject(itemID, inputString, check2, stateVar));
-    return;
+    return GenerateErrorObject(itemID, inputString, check2, stateVar);
   }
 
   const [varName, string2] = SplitByColon(inputString);
@@ -43,15 +39,13 @@ function UpdateCalcVarFromInput(itemID, inputString, stateVar, stateFunc) {
   const check3 = ValidVar(varName);
   if (check3 === true) {
   } else {
-    stateFunc(GenerateErrorObject(itemID, inputString, check3, stateVar));
-    return;
+    return GenerateErrorObject(itemID, inputString, check3, stateVar);
   }
 
   const check4 = HasOperator(string2);
   if (check4 === true) {
   } else {
-    stateFunc(GenerateErrorObject(itemID, inputString, check4, stateVar));
-    return;
+    return GenerateErrorObject(itemID, inputString, check4, stateVar);
   }
 
   const refrenceVar = ExtractVar(string2);
@@ -59,8 +53,7 @@ function UpdateCalcVarFromInput(itemID, inputString, stateVar, stateFunc) {
   const check5 = VarExists(refrenceVar, stateVar);
   if (check5 === true) {
   } else {
-    stateFunc(GenerateErrorObject(itemID, inputString, check5, stateVar));
-    return;
+    return GenerateErrorObject(itemID, inputString, check5, stateVar);
   }
 
   const varValue = GetVarValue(refrenceVar, stateVar);
@@ -75,9 +68,13 @@ function UpdateCalcVarFromInput(itemID, inputString, stateVar, stateFunc) {
 
   const valueString = GenerateValueString(resolvedValue, varUnit);
 
-  stateFunc(
-    GenerateGoodObject(itemID, inputString, varName, valueString, stateVar)
+  return GenerateGoodObject(
+    itemID,
+    inputString,
+    varName,
+    valueString,
+    stateVar
   );
 }
 
-export default UpdateCalcVarFromInput;
+export default UpdateCalcVar;

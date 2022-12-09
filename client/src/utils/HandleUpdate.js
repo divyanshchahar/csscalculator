@@ -1,20 +1,25 @@
-import UpdateAbsoluteFromInput from "./UpdateAbsoluteFromInput";
-import UpdateCalcFromInput from "./UpdateCalcFromInput";
+import UpdateAbsoluteVar from "./UpdateAbsoluteVar";
+import UpdateCalcVar from "./UpdateCalcVar";
+import UpdateRest from "./UpdateRest";
 
 /**
  * Function to change the `userInput` of the state object
  * @param {string} inputString - string from text input
  * @param {string} itemID - `id` of the object whose `userInput` needs to be changed
  * @param {array} stateVar - array of state varible
- * @param {function} satateFunc - function to hange state varaibles
+ * @param {function} stateFunc - function to hange state varaibles
  */
 
-function HandleUpdate(inputString, itemID, stateVar, satateFunc) {
+function HandleUpdate(inputString, itemID, stateVar, stateFunc) {
   const pattern = /calc/g;
   if (pattern.test(inputString)) {
-    UpdateCalcFromInput(itemID, inputString, stateVar, satateFunc);
+    const newArr = UpdateCalcVar(itemID, inputString, stateVar, stateFunc);
+    const updatedArr = UpdateRest(newArr);
+    stateFunc(updatedArr);
   } else {
-    UpdateAbsoluteFromInput(itemID, inputString, stateVar, satateFunc);
+    const newArr = UpdateAbsoluteVar(itemID, inputString, stateVar, stateFunc);
+    const updatedArr = UpdateRest(newArr);
+    stateFunc(updatedArr);
   }
 }
 
