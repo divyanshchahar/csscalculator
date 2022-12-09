@@ -1,5 +1,5 @@
 import UpdateAbsoluteVar from "./UpdateAbsoluteVar";
-import UpdateCalcFromInput from "./UpdateCalcFromInput";
+import UpdateCalcVar from "./UpdateCalcVar";
 
 /**
  * Function to change the `userInput` of the state object
@@ -12,7 +12,7 @@ import UpdateCalcFromInput from "./UpdateCalcFromInput";
 function HandleUpdate(inputString, itemID, stateVar, satateFunc) {
   const pattern = /calc/g;
   if (pattern.test(inputString)) {
-    UpdateCalcFromInput(itemID, inputString, stateVar, satateFunc);
+    UpdateCalcVar(itemID, inputString, stateVar, satateFunc);
   } else {
     UpdateAbsoluteVar(itemID, inputString, stateVar, satateFunc);
   }
