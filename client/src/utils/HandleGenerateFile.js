@@ -19,7 +19,7 @@ function HandleGenerateFile() {
         .catch((error) => {});
     }
   } catch (error) {
-    alert(error);
+    alert(`${error} \n This error usually occurs no varaibles are present`);
   }
 }
 
