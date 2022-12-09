@@ -1,4 +1,4 @@
-import UpdateAbsoluteFromInput from "./UpdateAbsoluteFromInput";
+import UpdateAbsoluteVar from "./UpdateAbsoluteVar";
 import UpdateCalcFromInput from "./UpdateCalcFromInput";
 
 /**
@@ -14,7 +14,7 @@ function HandleUpdate(inputString, itemID, stateVar, satateFunc) {
   if (pattern.test(inputString)) {
     UpdateCalcFromInput(itemID, inputString, stateVar, satateFunc);
   } else {
-    UpdateAbsoluteFromInput(itemID, inputString, stateVar, satateFunc);
+    UpdateAbsoluteVar(itemID, inputString, stateVar, satateFunc);
   }
 }
 

@@ -7,13 +7,13 @@ import GenerateErrorObject from "./GenerateErrorObject";
 import GenerateGoodObject from "./GenerateGoodObject";
 
 /**
- * Function to update absolute variables
+ * Function to update a single absolute variable
  * @param {string} itemID - `id` of the state object
  * @param {string} inputString - input from the user
  * @param {array} stateVar - array of state variable
  * @param {function} stateFunc - function to midify state variable
  */
-function UpdateAbsoluteFromInput(itemID, inputString, stateVar, stateFunc) {
+function UpdateAbsoluteVar(itemID, inputString, stateVar, stateFunc) {
   const check1 = HasColon(inputString);
   if (check1 === true) {
   } else {
@@ -49,4 +49,4 @@ function UpdateAbsoluteFromInput(itemID, inputString, stateVar, stateFunc) {
   );
 }
 
-export default UpdateAbsoluteFromInput;
+export default UpdateAbsoluteVar;
