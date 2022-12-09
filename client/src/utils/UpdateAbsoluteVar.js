@@ -11,7 +11,6 @@ import GenerateGoodObject from "./GenerateGoodObject";
  * @param {string} itemID - `id` of the state object
  * @param {string} inputString - input from the user
  * @param {array} stateVar - array of state variable
- * @param {function} stateFunc - function to midify state variable
  */
 function UpdateAbsoluteVar(itemID, inputString, stateVar) {
   const check1 = HasColon(inputString);
