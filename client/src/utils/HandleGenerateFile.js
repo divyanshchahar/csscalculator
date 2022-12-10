@@ -15,11 +15,19 @@ function HandleGenerateFile() {
         body: JSON.stringify(obj),
       })
         .then((response) => response.json())
-        .then((data) => {})
-        .catch((error) => {});
+        .then((data) => {
+          if (data.status !== 201) {
+            alert("Status code is not 201, unable to generate file");
+          }
+        })
+        .catch((error) => {
+          alert(error);
+        });
     }
   } catch (error) {
-    alert(`${error} \n This error usually occurs no varaibles are present`);
+    alert(
+      `${error} \n This error usually occurs when no varaibles are present`
+    );
   }
 }
 
