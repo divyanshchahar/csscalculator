@@ -2,27 +2,31 @@
  * Function to make api call to generate file
  */
 
-function HandleGenerateFile() {
+import { saveAs } from "file-saver";
+
+async function HandleGenerateFile() {
   const obj = JSON.parse(window.localStorage.getItem("CSS_CALCULATOR"));
 
   try {
     if (obj.length !== 0) {
-      fetch("/", {
+      const response = await fetch("/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(obj),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          if (data.status !== 201) {
-            alert("Status code is not 201, unable to generate file");
-          }
-        })
-        .catch((error) => {
-          alert(error);
-        });
+      });
+
+      const fileName = response.headers
+        .get("content-disposition")
+        .split(";")
+        .find((n) => n.includes("filename="))
+        .replace("filename=", "")
+        .trim();
+
+      const blob = await response.blob();
+
+      saveAs(blob, fileName);
     }
   } catch (error) {
     alert(

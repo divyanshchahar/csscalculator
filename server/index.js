@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const fs = require("fs");
 
 const handlePost = require("./handlePost");
 
@@ -8,7 +9,12 @@ app.use(bodyParser.json());
 
 app.post("/", (req, res) => {
   handlePost(req.body);
-  res.json({ status: 201 });
+  setTimeout(() => {
+    res.download("../output/resolved_variables.txt");
+    setTimeout(() => {
+      fs.unlinkSync("../output/resolved_variables.txt");
+    }, 1000);
+  }, 1000);
 });
 
 app.listen(3200);
