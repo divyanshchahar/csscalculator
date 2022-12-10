@@ -11,6 +11,9 @@ app.post("/", (req, res) => {
   handlePost(req.body);
   setTimeout(() => {
     res.download("../output/resolved_variables.txt");
+    setTimeout(() => {
+      fs.unlinkSync("../output/resolved_variables.txt");
+    }, 1000);
   }, 1000);
 });
 
