@@ -7,6 +7,8 @@
 :root {
   --h1: 10vw;
 
+  --fs2: 2rem;
+
   --p2: calc(0.2 * var(--h1));
 
   --fs3: 1rem;
@@ -29,6 +31,8 @@
   /* COLOR */
   --background1: rgba(225, 225, 255, 0.4);
   --background2: rgba(255, 255, 255, 1);
+  --background3: rgba(0, 0, 144, 1);
+
   --hover1: rgba(0, 0, 255, 0.1);
 }
 
@@ -40,16 +44,29 @@ body {
   display: flex;
   padding: var(--p2);
   justify-content: space-between;
+  align-items: center;
 }
 
 .branding {
-  font-family: "Teko", sans-serif;
-  font-size: var(--h1);
+  padding: 0.5rem;
+  background-color: var(--background3);
+  /* font-family: "Teko", sans-serif; */
+  font-size: var(--fs2);
+  font-weight: 800;
+  border-radius: 1rem;
+  color: white;
 }
 
 .brand-image {
+  display: none;
   height: var(--h1);
   padding-right: var(--p2);
+}
+
+.image-button {
+  background-color: var(--background3);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .icon {
