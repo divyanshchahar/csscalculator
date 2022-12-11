@@ -55,7 +55,7 @@ body {
   font-size: var(--fs2);
   font-weight: var(--fw2);
   border-radius: var(--br2);
-  color: white;
+  color: var(--background2);
 }
 
 /* 3 */
