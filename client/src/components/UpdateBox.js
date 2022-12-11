@@ -18,7 +18,9 @@ function UpdateBox(args) {
 
   return (
     <input
+      size={50}
       type="text"
+      className="edit-box"
       value={userInput}
       onChange={(e) => {
         setUserInput(e.target.value);
