@@ -26,6 +26,12 @@
   --hover1: rgba(0, 0, 255, 0.1);
 }
 
+.top-nav-bar {
+  display: flex;
+  padding: var(--p2);
+  justify-content: space-between;
+}
+
 .branding {
   display: flex;
   align-items: center;
@@ -40,12 +46,6 @@
 
 .icon {
   height: var(--h1);
-}
-
-.top-nav-bar {
-  display: flex;
-  padding: var(--p2);
-  justify-content: space-between;
 }
 
 .list-and-input {
