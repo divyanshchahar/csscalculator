@@ -17,14 +17,13 @@
 
   --b3: calc(0.25 * var(--fs3));
 
-  --m1_5: 5vh;
-  --m2_5: 5vw;
-
   --m5: 1rem;
 
+  --p6: 5vw;
+  --w6: 25vw;
   --m6: calc(var(--fs3) * 0.5);
 
-  --w6: 1.5rem;
+  --w13: 1.5rem;
 
   --p9: calc(0.25 * var(--fs3));
 
@@ -80,8 +79,9 @@ body {
 
 /* 6 */
 .list-and-input {
-  padding: var(--m1_5) 0 var(--m2_5) var(--m1_5);
-  width: fit-content;
+  padding-top: var(--p6);
+  margin: auto;
+  width: var(--w6);
 }
 
 /* 7 */
@@ -119,6 +119,10 @@ body {
   border: 1px solid red;
 }
 
+.edit-box {
+  padding: var(--p9);
+}
+
 /* 12 */
 .inline-button {
   margin: 0 0 0 var(--m5);
@@ -126,7 +130,7 @@ body {
 
 /* 13 */
 .inline-icon {
-  width: var(--w6);
+  width: var(--w13);
 }
 
 /* 14  */
