@@ -41,6 +41,7 @@ body {
   background-color: var(--background1);
 }
 
+/* 1 */
 .top-nav-bar {
   display: flex;
   padding: var(--p2);
@@ -48,6 +49,7 @@ body {
   align-items: center;
 }
 
+/* 2 */
 .branding {
   padding: 0.5rem;
   background-color: var(--background3);
@@ -58,27 +60,32 @@ body {
   color: white;
 }
 
+/* 3 */
 .brand-image {
   display: none;
   height: var(--h1);
   padding-right: var(--p2);
 }
 
+/* 4 */
 .image-button {
   background-color: var(--background3);
   padding: var(--p2);
   border-radius: var(--br2);
 }
 
+/* 5 */
 .icon {
   height: var(--h1);
 }
 
+/* 6 */
 .list-and-input {
   padding: var(--m1_5) 0 var(--m2_5) var(--m1_5);
   width: fit-content;
 }
 
+/* 7 */
 .css-var {
   display: flex;
   align-items: center;
@@ -87,10 +94,12 @@ body {
   margin-top: var(--m6);
 }
 
+/* 8 */
 .css-var:hover {
   background-color: var(--hover1);
 }
 
+/* 9 */
 .calculated {
   font-size: var(--fs3);
   margin: var(--m3);
@@ -98,6 +107,7 @@ body {
   border-left: var(--b3) solid grey;
 }
 
+/* 10 */
 .absolute {
   font-size: var(--fs3);
   margin: var(--m3);
@@ -105,18 +115,22 @@ body {
   border-left: var(--b3) solid green;
 }
 
+/* 11 */
 .error {
   border: 1px solid red;
 }
 
+/* 12 */
 .inline-button {
   margin: 0 0 0 var(--m5);
 }
 
+/* 13 */
 .inline-icon {
   width: var(--w6);
 }
 
+/* 14  */
 .input-box {
   padding: var(--p9);
   margin-top: var(--m6);
