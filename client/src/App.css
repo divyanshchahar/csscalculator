@@ -119,21 +119,22 @@ body {
   border: 1px solid red;
 }
 
+/* 12 */
 .edit-box {
   padding: var(--p9);
 }
 
-/* 12 */
+/* 13 */
 .inline-button {
   margin: 0 0 0 var(--m5);
 }
 
-/* 13 */
+/* 14 */
 .inline-icon {
   width: var(--w13);
 }
 
-/* 14  */
+/* 15  */
 .input-box {
   padding: var(--p9);
   margin-top: var(--m6);
