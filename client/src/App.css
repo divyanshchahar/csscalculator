@@ -5,89 +5,141 @@
 }
 
 :root {
-  --h1: 10vw;
+  --fs2: 1rem;
+  --p2: calc(0.2 * var(--fs2));
+  --fw2: 800;
+  --br2: calc(0.5 * var(--fs2));
 
-  --p2: calc(0.2 * var(--h1));
-
+  --h3: 5vw;
   --fs3: 1rem;
-  --m3: calc(0.25 * var(--fs3));
-  --p3: calc(0.25 * var(--fs3));
 
-  --b3: calc(0.25 * var(--fs3));
+  --m13: 1rem;
 
-  --m1_5: 5vh;
-  --m2_5: 5vw;
+  --p6: 5vw;
+  --w6: 95vw;
+  --m6: calc(var(--fs3) * 0.5);
 
-  --m5: 1rem;
+  --b9: calc(0.25 * var(--fs3));
+  --m9: calc(0.25 * var(--fs3));
+  --p9: calc(0.25 * var(--fs3));
 
-  --w6: 1.5rem;
+  --w14: 1.5rem;
+
+  --p12: calc(0.25 * var(--fs3));
 
   /* COLOR */
+  --background1: rgba(225, 225, 255, 0.4);
+  --background2: rgba(255, 255, 255, 1);
+  --background3: rgba(0, 0, 144, 1);
+
   --hover1: rgba(0, 0, 255, 0.1);
 }
 
-.branding {
-  display: flex;
-  align-items: center;
-  font-family: "Teko", sans-serif;
-  font-size: var(--h1);
+body {
+  background-color: var(--background1);
 }
 
-.brand-image {
-  height: var(--h1);
-  padding-right: var(--p2);
-}
-
-.icon {
-  height: var(--h1);
-}
-
+/* 1 */
 .top-nav-bar {
   display: flex;
   padding: var(--p2);
   justify-content: space-between;
+  align-items: center;
 }
 
+/* 2 */
+.branding {
+  padding: 0.5rem;
+  background-color: var(--background3);
+  /* font-family: "Teko", sans-serif; */
+  font-size: var(--fs2);
+  font-weight: var(--fw2);
+  border-radius: var(--br2);
+  color: var(--background2);
+}
+
+/* 3 */
+.brand-image {
+  display: none;
+  height: var(--h3);
+  padding-right: var(--p2);
+}
+
+/* 4 */
+.image-button {
+  background-color: var(--background3);
+  padding: var(--p2);
+  border-radius: var(--br2);
+}
+
+/* 5 */
+.icon {
+  height: var(--h3);
+}
+
+/* 6 */
 .list-and-input {
-  padding: var(--m1_5) 0 var(--m2_5) var(--m1_5);
-  width: fit-content;
+  padding-top: var(--p6);
+  margin: auto;
+  width: var(--w6);
 }
 
+/* 7 */
 .css-var {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: var(--background2);
+  margin-top: var(--m6);
 }
 
+/* 8 */
 .css-var:hover {
   background-color: var(--hover1);
 }
 
+/* 9 */
 .calculated {
   font-size: var(--fs3);
-  margin: var(--m3);
-  padding-left: var(--p3);
-  border-left: var(--b3) solid grey;
+  margin: var(--m9);
+  padding-left: var(--p9);
+  border-left: var(--b9) solid grey;
 }
 
+/* 10 */
 .absolute {
   font-size: var(--fs3);
-  margin: var(--m3);
-  padding-left: var(--p3);
-  border-left: var(--b3) solid green;
+  margin: var(--m9);
+  padding-left: var(--p9);
+  border-left: var(--b9) solid green;
 }
 
+/* 11 */
 .error {
   border: 1px solid red;
 }
 
-.inline-button {
-  margin: 0 0 0 var(--m5);
+/* 12 */
+.edit-box {
+  padding: var(--p12);
 }
 
-.inline-icon {
-  width: var(--w6);
+/* 13 */
+.inline-button {
+  margin: 0 0 0 var(--m13);
 }
+
+/* 14 */
+.inline-icon {
+  width: var(--w14);
+}
+
+/* 15  */
+.input-box {
+  padding: var(--p12);
+  margin-top: var(--m6);
+}
+
 /* 
 ##################
 # TOUCH DISPLAYS #
@@ -96,18 +148,34 @@
 
 @media screen and (min-width: 429px) {
   :root {
-    --h1: 5vw;
+    --fs2: 2rem;
+    --p2: calc(0.2 * var(--fs2));
+    --fw2: 800;
+    --br2: calc(0.5 * var(--fs2));
 
-    --p2: calc(0.2 * var(--h1));
-
+    --h3: 5vw;
     --fs3: 1rem;
-    --m3: calc(0.25 * var(--fs3));
-    --p3: calc(0.25 * var(--fs3));
 
-    --b3: calc(0.25 * var(--fs3));
+    --m13: 1rem;
 
-    --m1_5: 5vh;
-    --m2_5: 5vw;
+    --p6: 5vw;
+    --w6: 50vw;
+    --m6: calc(var(--fs3) * 0.5);
+
+    --b9: calc(0.25 * var(--fs3));
+    --p9: calc(0.25 * var(--fs3));
+    --m9: calc(0.25 * var(--fs3));
+
+    --w14: 1.5rem;
+
+    --p12: calc(0.25 * var(--fs3));
+
+    /* COLOR */
+    --background1: rgba(225, 225, 255, 0.4);
+    --background2: rgba(255, 255, 255, 1);
+    --background3: rgba(0, 0, 144, 1);
+
+    --hover1: rgba(0, 0, 255, 0.1);
   }
 }
 
@@ -118,17 +186,33 @@
 
 @media screen and (min-width: 1025px) {
   :root {
-    --h1: 2.5vw;
+    --fs2: 2rem;
+    --p2: calc(0.2 * var(--fs2));
+    --fw2: 800;
+    --br2: calc(0.5 * var(--fs2));
 
-    --p2: calc(0.2 * var(--h1));
-
+    --h3: 3vw;
     --fs3: 1rem;
-    --m3: calc(0.25 * var(--fs3));
-    --p3: calc(0.25 * var(--fs3));
 
-    --b3: calc(0.25 * var(--fs3));
+    --m13: 1rem;
 
-    --m1_5: 5vh;
-    --m2_5: 5vw;
+    --p6: 5vw;
+    --w6: 25vw;
+    --m6: calc(var(--fs3) * 0.5);
+
+    --b9: calc(0.25 * var(--fs3));
+    --p9: calc(0.25 * var(--fs3));
+    --m9: calc(0.25 * var(--fs3));
+
+    --w14: 1.5rem;
+
+    --p12: calc(0.25 * var(--fs3));
+
+    /* COLOR */
+    --background1: rgba(225, 225, 255, 0.4);
+    --background2: rgba(255, 255, 255, 1);
+    --background3: rgba(0, 0, 144, 1);
+
+    --hover1: rgba(0, 0, 255, 0.1);
   }
 }
