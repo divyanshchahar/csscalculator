@@ -8,8 +8,9 @@
   --h1: 10vw;
 
   --fs2: 2rem;
-
-  --p2: calc(0.2 * var(--h1));
+  --p2: calc(0.2 * var(--fs2));
+  --fw2: 800;
+  --br2: calc(0.5 * var(--fs2));
 
   --fs3: 1rem;
   --m3: calc(0.25 * var(--fs3));
@@ -52,8 +53,8 @@ body {
   background-color: var(--background3);
   /* font-family: "Teko", sans-serif; */
   font-size: var(--fs2);
-  font-weight: 800;
-  border-radius: 1rem;
+  font-weight: var(--fw2);
+  border-radius: var(--br2);
   color: white;
 }
 
@@ -65,8 +66,8 @@ body {
 
 .image-button {
   background-color: var(--background3);
-  padding: 0.5rem;
-  border-radius: 0.5rem;
+  padding: var(--p2);
+  border-radius: var(--br2);
 }
 
 .icon {
