@@ -148,18 +148,34 @@ body {
 
 @media screen and (min-width: 429px) {
   :root {
-    --h3: 5vw;
+    --fs2: 2rem;
+    --p2: calc(0.2 * var(--fs2));
+    --fw2: 800;
+    --br2: calc(0.5 * var(--fs2));
 
-    --p2: calc(0.2 * var(--h3));
-
+    --h3: 10vw;
     --fs3: 1rem;
     --m3: calc(0.25 * var(--fs3));
     --p3: calc(0.25 * var(--fs3));
 
     --b3: calc(0.25 * var(--fs3));
 
-    --m1_5: 5vh;
-    --m2_5: 5vw;
+    --m13: 1rem;
+
+    --p6: 5vw;
+    --w6: 25vw;
+    --m6: calc(var(--fs3) * 0.5);
+
+    --w14: 1.5rem;
+
+    --p12: calc(0.25 * var(--fs3));
+
+    /* COLOR */
+    --background1: rgba(225, 225, 255, 0.4);
+    --background2: rgba(255, 255, 255, 1);
+    --background3: rgba(0, 0, 144, 1);
+
+    --hover1: rgba(0, 0, 255, 0.1);
   }
 }
 
@@ -170,17 +186,33 @@ body {
 
 @media screen and (min-width: 1025px) {
   :root {
-    --h3: 2.5vw;
+    --fs2: 2rem;
+    --p2: calc(0.2 * var(--fs2));
+    --fw2: 800;
+    --br2: calc(0.5 * var(--fs2));
 
-    --p2: calc(0.2 * var(--h3));
-
+    --h3: 10vw;
     --fs3: 1rem;
     --m3: calc(0.25 * var(--fs3));
     --p3: calc(0.25 * var(--fs3));
 
     --b3: calc(0.25 * var(--fs3));
 
-    --m1_5: 5vh;
-    --m2_5: 5vw;
+    --m13: 1rem;
+
+    --p6: 5vw;
+    --w6: 25vw;
+    --m6: calc(var(--fs3) * 0.5);
+
+    --w14: 1.5rem;
+
+    --p12: calc(0.25 * var(--fs3));
+
+    /* COLOR */
+    --background1: rgba(225, 225, 255, 0.4);
+    --background2: rgba(255, 255, 255, 1);
+    --background3: rgba(0, 0, 144, 1);
+
+    --hover1: rgba(0, 0, 255, 0.1);
   }
 }
