@@ -24,6 +24,7 @@
 
   /* COLOR */
   --background1: rgba(225, 225, 255, 0.4);
+  --background2: rgba(255, 255, 255, 1);
   --hover1: rgba(0, 0, 255, 0.1);
 }
 
@@ -60,6 +61,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: var(--background2);
 }
 
 .css-var:hover {
@@ -91,6 +93,7 @@ body {
 .inline-icon {
   width: var(--w6);
 }
+
 /* 
 ##################
 # TOUCH DISPLAYS #
