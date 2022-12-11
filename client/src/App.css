@@ -5,23 +5,23 @@
 }
 
 :root {
-  --fs2: 2rem;
+  --fs2: 1rem;
   --p2: calc(0.2 * var(--fs2));
   --fw2: 800;
   --br2: calc(0.5 * var(--fs2));
 
-  --h3: 10vw;
+  --h3: 5vw;
   --fs3: 1rem;
-  --m3: calc(0.25 * var(--fs3));
-  --p3: calc(0.25 * var(--fs3));
-
-  --b3: calc(0.25 * var(--fs3));
 
   --m13: 1rem;
 
   --p6: 5vw;
   --w6: 25vw;
   --m6: calc(var(--fs3) * 0.5);
+
+  --b9: calc(0.25 * var(--fs3));
+  --m9: calc(0.25 * var(--fs3));
+  --p9: calc(0.25 * var(--fs3));
 
   --w14: 1.5rem;
 
@@ -101,17 +101,17 @@ body {
 /* 9 */
 .calculated {
   font-size: var(--fs3);
-  margin: var(--m3);
-  padding-left: var(--p3);
-  border-left: var(--b3) solid grey;
+  margin: var(--m9);
+  padding-left: var(--p9);
+  border-left: var(--b9) solid grey;
 }
 
 /* 10 */
 .absolute {
   font-size: var(--fs3);
-  margin: var(--m3);
-  padding-left: var(--p3);
-  border-left: var(--b3) solid green;
+  margin: var(--m9);
+  padding-left: var(--p9);
+  border-left: var(--b9) solid green;
 }
 
 /* 11 */
@@ -155,16 +155,16 @@ body {
 
     --h3: 10vw;
     --fs3: 1rem;
-    --m3: calc(0.25 * var(--fs3));
-    --p3: calc(0.25 * var(--fs3));
-
-    --b3: calc(0.25 * var(--fs3));
 
     --m13: 1rem;
 
     --p6: 5vw;
     --w6: 25vw;
     --m6: calc(var(--fs3) * 0.5);
+
+    --b9: calc(0.25 * var(--fs3));
+    --p9: calc(0.25 * var(--fs3));
+    --m9: calc(0.25 * var(--fs3));
 
     --w14: 1.5rem;
 
@@ -193,16 +193,16 @@ body {
 
     --h3: 3vw;
     --fs3: 1rem;
-    --m3: calc(0.25 * var(--fs3));
-    --p3: calc(0.25 * var(--fs3));
-
-    --b3: calc(0.25 * var(--fs3));
 
     --m13: 1rem;
 
     --p6: 5vw;
     --w6: 25vw;
     --m6: calc(var(--fs3) * 0.5);
+
+    --b9: calc(0.25 * var(--fs3));
+    --p9: calc(0.25 * var(--fs3));
+    --m9: calc(0.25 * var(--fs3));
 
     --w14: 1.5rem;
 
