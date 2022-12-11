@@ -23,7 +23,12 @@
   --w6: 1.5rem;
 
   /* COLOR */
+  --background1: rgba(250, 250, 255, 1);
   --hover1: rgba(0, 0, 255, 0.1);
+}
+
+body {
+  background-color: var(--background1);
 }
 
 .top-nav-bar {
@@ -33,8 +38,6 @@
 }
 
 .branding {
-  display: flex;
-  align-items: center;
   font-family: "Teko", sans-serif;
   font-size: var(--h1);
 }
