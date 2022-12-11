@@ -17,15 +17,15 @@
 
   --b3: calc(0.25 * var(--fs3));
 
-  --m5: 1rem;
+  --m13: 1rem;
 
   --p6: 5vw;
   --w6: 25vw;
   --m6: calc(var(--fs3) * 0.5);
 
-  --w13: 1.5rem;
+  --w14: 1.5rem;
 
-  --p9: calc(0.25 * var(--fs3));
+  --p12: calc(0.25 * var(--fs3));
 
   /* COLOR */
   --background1: rgba(225, 225, 255, 0.4);
@@ -121,22 +121,22 @@ body {
 
 /* 12 */
 .edit-box {
-  padding: var(--p9);
+  padding: var(--p12);
 }
 
 /* 13 */
 .inline-button {
-  margin: 0 0 0 var(--m5);
+  margin: 0 0 0 var(--m13);
 }
 
 /* 14 */
 .inline-icon {
-  width: var(--w13);
+  width: var(--w14);
 }
 
 /* 15  */
 .input-box {
-  padding: var(--p9);
+  padding: var(--p12);
   margin-top: var(--m6);
 }
 
