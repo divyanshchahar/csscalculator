@@ -153,13 +153,13 @@ body {
     --fw2: 800;
     --br2: calc(0.5 * var(--fs2));
 
-    --h3: 10vw;
+    --h3: 5vw;
     --fs3: 1rem;
 
     --m13: 1rem;
 
     --p6: 5vw;
-    --w6: 25vw;
+    --w6: 50vw;
     --m6: calc(var(--fs3) * 0.5);
 
     --b9: calc(0.25 * var(--fs3));
