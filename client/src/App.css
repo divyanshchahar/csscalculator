@@ -191,7 +191,7 @@ body {
     --fw2: 800;
     --br2: calc(0.5 * var(--fs2));
 
-    --h3: 10vw;
+    --h3: 3vw;
     --fs3: 1rem;
     --m3: calc(0.25 * var(--fs3));
     --p3: calc(0.25 * var(--fs3));
