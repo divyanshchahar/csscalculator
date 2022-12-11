@@ -15,6 +15,7 @@ function InputBox(args) {
     <input
       type="text"
       placeholder="Add new variable"
+      className="input-box"
       value={inputString}
       onChange={(e) => setInputString(e.target.value)}
       onKeyDown={(e) => {

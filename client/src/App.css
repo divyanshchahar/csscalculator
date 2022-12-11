@@ -24,6 +24,8 @@
 
   --w6: 1.5rem;
 
+  --p9: calc(0.25 * var(--fs3));
+
   /* COLOR */
   --background1: rgba(225, 225, 255, 0.4);
   --background2: rgba(255, 255, 255, 1);
@@ -95,6 +97,11 @@ body {
 
 .inline-icon {
   width: var(--w6);
+}
+
+.input-box {
+  padding: var(--p9);
+  margin-top: var(--m6);
 }
 
 /* 
