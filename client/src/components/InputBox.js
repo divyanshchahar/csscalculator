@@ -13,6 +13,7 @@ function InputBox(args) {
 
   return (
     <input
+      size={50}
       type="text"
       placeholder="Add new variable"
       className="input-box"
