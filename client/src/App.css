@@ -20,6 +20,8 @@
 
   --m5: 1rem;
 
+  --m6: calc(var(--fs3) * 0.5);
+
   --w6: 1.5rem;
 
   /* COLOR */
@@ -62,6 +64,7 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: var(--background2);
+  margin-top: var(--m6);
 }
 
 .css-var:hover {
