@@ -5,13 +5,12 @@
 }
 
 :root {
-  --h1: 10vw;
-
   --fs2: 2rem;
   --p2: calc(0.2 * var(--fs2));
   --fw2: 800;
   --br2: calc(0.5 * var(--fs2));
 
+  --h3: 10vw;
   --fs3: 1rem;
   --m3: calc(0.25 * var(--fs3));
   --p3: calc(0.25 * var(--fs3));
@@ -63,7 +62,7 @@ body {
 /* 3 */
 .brand-image {
   display: none;
-  height: var(--h1);
+  height: var(--h3);
   padding-right: var(--p2);
 }
 
@@ -76,7 +75,7 @@ body {
 
 /* 5 */
 .icon {
-  height: var(--h1);
+  height: var(--h3);
 }
 
 /* 6 */
@@ -144,9 +143,9 @@ body {
 
 @media screen and (min-width: 429px) {
   :root {
-    --h1: 5vw;
+    --h3: 5vw;
 
-    --p2: calc(0.2 * var(--h1));
+    --p2: calc(0.2 * var(--h3));
 
     --fs3: 1rem;
     --m3: calc(0.25 * var(--fs3));
@@ -166,9 +165,9 @@ body {
 
 @media screen and (min-width: 1025px) {
   :root {
-    --h1: 2.5vw;
+    --h3: 2.5vw;
 
-    --p2: calc(0.2 * var(--h1));
+    --p2: calc(0.2 * var(--h3));
 
     --fs3: 1rem;
     --m3: calc(0.25 * var(--fs3));
